@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Jeffrey Bohac Portfolio</title>
 </head>
 <body>
 
     <div id="main-flex">
 
         <div id="header">
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Previous Work</li>
-            <li>Projects</li>
+            <li id="home-button">Home</li>
+            <li id="about-button">About</li>
+            <li id="works-button">Works</li>
+            <li id="works-button">Projects</li>
         <div id="hburg-flex">
             <div class="hburg"></div>
             <div class="hburg"></div>
@@ -24,7 +25,20 @@
         </div>
 
         <div id="modal-flex">
-            <div class="modal-page">
+
+            <div id="about" class="modal-page">
+                <h1>Jeffrey Bohac was born in Thibodaux, Louisianna and spent his childhood in the greater Atlanta metro area.</h1>
+                <p>His favorite activities are:</p>
+                <ul>
+                    <li>Playing video games</li>
+                    <li>Writing JavaScript code</li>
+                    <li>Playing instruments loudly</li>
+                </ul>
+
+
+            </div>
+
+            <div id="home" class="modal-page">
             <h1>This box will be where modals are displayed which will contain contents of the different pages</h1>
             <p>The previous work page will have a carousel of doors/windows I have crafted and installed</p>
             <p>Hamburger menu will drop down with website links and I will implement a dark mode button</p>
@@ -33,6 +47,6 @@
         </div>
 
     </div>
-    
+<script src="app.js"></script>
 </body>
 </html>

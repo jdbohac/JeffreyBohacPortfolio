@@ -20,12 +20,14 @@ li:hover{
     cursor: pointer;
 }
 li{
+    display:flex;
+    flex:1;
     margin: 5%;
 }
 #header{
     display:flex;
     justify-content: space-around;
-    min-width:30rem;
+    align-items: center;
 }
 #modal-flex{
     border:1px solid black;
@@ -55,4 +57,8 @@ p{
     height:4px;
     background-color: black;
     margin:2px;
+    align-self: flex-end;
+}
+#about{
+    display: none;
 }
