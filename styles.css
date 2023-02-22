@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#main-flex{
+    border: 1px solid black;
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    max-width: 40rem;
+    
+
+}
+li:hover{
+    cursor: pointer;
+}
+li{
+    margin: 5%;
+}
+#header{
+    display:flex;
+    justify-content: space-around;
+    min-width:30rem;
+}
+#modal-flex{
+    border:1px solid black;
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    min-height:30rem;
+}
+h1{
+    margin: 5%;
+}
+p{
+    margin:5%;
+}
+#hburg-flex{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+}
+#hburg-flex:hover{
+    cursor: pointer;
+}
+.hburg{
+    display: block;
+    width:20px;
+    height:4px;
+    background-color: black;
+    margin:2px;
+}
