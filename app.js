@@ -6,15 +6,19 @@ const nextImg = () => {
         .children()
         .eq(imgCounter)
         .css('display', 'none')
-    imgCounter++;  
-    $('#works-carousel')
-        .children()
-        .eq(imgCounter)
-        .fadeIn(800)
-        .css('display', 'flex')
-        if(imgCounter > )
+        imgCounter++;
+        if(imgCounter > $('#works-carousel').children().length -1){
+            imgCounter = 0;
+        }
+        $('#works-carousel')
+            .children()
+            .eq(imgCounter)
+            .fadeIn(800)
+            .css('display', 'flex')
 }
-
+const lastImg = () => {
+    
+}
 const hideModal = () => {
     $('.modal-page').css('display', 'none')
 }
