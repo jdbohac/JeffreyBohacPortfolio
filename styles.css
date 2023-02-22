@@ -70,8 +70,13 @@ p{
         font-size: 25px;
     }
     #modal-flex{
+        flex:2
+    }
+    #header{
+        flex-flow:column;
     }
     #main-flex{
+        flex-flow:row wrap;
         margin-top: 20%;
     }
 }
