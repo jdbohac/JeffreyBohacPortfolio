@@ -1,8 +1,8 @@
 body{
     display: flex;
     justify-content: center;
-    background-color: rgb(57, 57, 63);
-    color:antiquewhite;
+    background-color: rgb(194, 194, 214);
+    color:rgb(54, 48, 41);
 }
 
 button{
@@ -26,16 +26,17 @@ button{
     
 
 }
-li:hover{
+#header li:hover{
     cursor: pointer;
 }
-li{
+#header li{
+    color: rgb(105, 93, 78);
     margin:1rem;
 }
 #header{
     display:flex;
     justify-content: space-around;
-    background-color: rgb(57, 57, 63);
+    background-color: rgb(194, 194, 214);
     border-bottom: 1px solid rgba(0, 0, 0, 0.559);
     padding-right:2%;
     /* top:0;
@@ -48,7 +49,7 @@ li{
     align-items: center;
     flex:1;
     padding:5%; 
-    background-color: rgb(69, 69, 96);
+    background-color: background-color: rgb(194, 194, 214);
 }
 .modal-page{
     display:flex;
@@ -57,13 +58,18 @@ li{
     text-align: center;
 }
 h1{
-    color:rgb(236, 221, 198)
+    color:rgb(111, 102, 89)
 }
-li{
+ul{
+    text-align: center;
+}
+#about li{
     list-style: none;
+    color: rgb(133, 121, 103);
 }
+
 p{
-    color: rgb(239, 218, 185);
+    color: rgb(143, 124, 94);
     font-size: 18px;
     line-height: 1rem;
 }
