@@ -68,4 +68,10 @@ p{
     h1{
         font-size: medium;
     }
+    #modal-flex{
+        max-width:20rem;
+    }
+    #main-flex{
+        max-width:20rem
+    }
 }
