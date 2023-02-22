@@ -117,7 +117,7 @@ p{
         max-width:4rem;
     }
     #main-flex{
-        flex-flow:row wrap;
+        flex-flow:row-reverse wrap;
         margin-top: 20%;
     }
     .carousel-img{
