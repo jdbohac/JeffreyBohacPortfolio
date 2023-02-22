@@ -16,6 +16,7 @@ body{
     flex-basis:15rem;
     max-width:35rem;
     flex:1;
+    margin-top: 10%;
     
 
 }
@@ -66,11 +67,11 @@ p{
 }
 @media(max-width: 600px){
     h1{
-        font-size: medium;
+        font-size: 25px;
     }
     #modal-flex{
-        max-width:20rem;
     }
     #main-flex{
+        margin-top: 20%;
     }
 }
