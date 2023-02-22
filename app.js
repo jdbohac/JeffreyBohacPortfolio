@@ -17,7 +17,19 @@ const nextImg = () => {
             .css('display', 'flex')
 }
 const lastImg = () => {
-    
+    $('#works-carousel')
+        .children()
+        .eq(imgCounter)
+        .css('display', 'none')
+        imgCounter--;
+        if(imgCounter < 0){ 
+            imgCounter = $('#works-carousel').children().length -1;
+        }
+        $('#works-carousel')
+            .children()
+            .eq(imgCounter)
+            .fadeIn(800)
+            .css('display', 'flex')
 }
 const hideModal = () => {
     $('.modal-page').css('display', 'none')
@@ -42,5 +54,5 @@ $('#about-button').on('click', showAbout)
 $('#home-button').on('click', showHome)
 $('#works-button').on('click', showWorks)
 $('#right-button').on('click', nextImg)
-
+$('#left-button').on('click', lastImg)
 })
