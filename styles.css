@@ -2,6 +2,7 @@ body{
     display: flex;
     justify-content: center;
     min-width:10rem;
+    background-color: rgb(229, 237, 238);
 }
 
 
@@ -13,7 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     list-style: none;
-    max-width: 40rem;
+    max-width: 30rem;
     
 
 }
@@ -35,14 +36,14 @@ li{
     display: flex;
     flex-flow:row wrap;
     align-items: center;
-    min-height:30rem;
     flex:1;
+    padding:5%;
 }
 h1{
-    margin: 5%;
+    color:rgb(79, 67, 49)
 }
 p{
-    margin:5%;
+    color: rgb(79, 67, 49);
 }
 #hburg-flex{
     display: flex;
@@ -63,4 +64,9 @@ p{
 }
 #about{
     display: none;
+}
+@media(max-width=800px){
+    body{
+        font-size: small;
+    }
 }
