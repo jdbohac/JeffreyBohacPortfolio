@@ -13,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     list-style: none;
+    flex-basis:15rem;
     max-width:35rem;
     flex:1;
     
@@ -22,9 +23,7 @@ li:hover{
     cursor: pointer;
 }
 li{
-    display:flex;
-    flex:1;
-    margin: 5%;
+    margin:1rem;
 }
 #header{
     display:flex;
