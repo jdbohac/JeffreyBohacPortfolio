@@ -34,29 +34,9 @@ const lastImg = () => {
 const hideModal = () => {
     $('.modal-page').css('display', 'none')
 }
-const showHome = () => {
+const showModal = (modal) =>{
     hideModal();
-    $('#home').slideDown(800)
-}
-const showAbout = () =>{
-    hideModal();
-    $('#about').fadeIn(800)
-}
-const showLife = () => {
-    hideModal();
-    $('#life').fadeIn(800)
-}
-const showWork = () => {
-    hideModal();
-    $('#work').fadeIn(800)
-}
-const showHobbies = () => {
-    hideModal();
-    $('#hobbies').fadeIn(800)
-}
-const showWorks = () => {
-    hideModal();
-    $('#works').fadeIn(800).css('display', 'flex')
+    $(`${modal.data.text}`).fadeIn(800).css('display', 'flex')
 }
 const dropDown = () => {
         $('.link').slideToggle(200);
@@ -64,13 +44,13 @@ const dropDown = () => {
 
 
 $(() => {
-$('#about-button').on('click', showAbout)
-$('.back').on('click', showAbout)
-$('#life-button').on('click', showLife)
-$('#work-button').on('click', showWork)
-$('#hobbies-button').on('click', showHobbies)
-$('#home-button').on('click', showHome)
-$('#works-button').on('click', showWorks)
+$('#home-button').click({text: '#home'}, showModal)
+$('#about-button').click({text: '#about'}, showModal)
+$('.back').click({text: '#about'}, showModal)
+$('#life-button').click({text: '#life'}, showModal)
+$('#work-button').click({text: '#work'}, showModal)
+$('#hobbies-button').click({text: '#hobbies'}, showModal)
+$('#works-button').click({text: '#works'}, showModal)
 $('#right-button').on('click', nextImg)
 $('#left-button').on('click', lastImg)
 $('#right-big-button').on('click', nextImg)
