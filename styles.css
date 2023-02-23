@@ -47,8 +47,8 @@ button{
     justify-content: space-between;
     background-color: rgb(194, 194, 214);
     border-bottom: 2px solid rgb(128, 121, 121);
-    border-radius: 20%;
     padding-right:5%;
+    max-height:4rem;
     /* top:0;
     left:0;
     bottom:0; */
@@ -81,10 +81,16 @@ p{
     font-size: 18px;
     line-height: 1.5rem;
 }
+#links-container{
+    display: flex;
+    flex-flow: column;
+    overflow:visible;
+    justify-content: center;
+}
 #hburg-flex{
     display: flex;
     flex-flow: column;
-    justify-content: flex-end;
+    justify-content: center;
     margin-left: 5%;
     padding-bottom:8%;
 }
@@ -103,10 +109,8 @@ p{
     border-radius:2px;
     background-color: rgba(68, 57, 57, 0.24);
     z-index: 1;
-    position:absolute;
-    left:60%;
-    margin-top: 7%;
-    transition: all .5s ease-in-out;
+    position:relative;
+    align-self: flex-end;
 }
 #links-menu:target{
     height:auto;
@@ -208,7 +212,8 @@ a{
         border-left: 2px solid rgb(128, 121, 121);
         border-bottom:none;
         align-self: flex-start;
-        padding-right:1%
+        padding-right:1%;
+        max-height:none;
     }
     #header li{
         line-height: 200%;
@@ -224,7 +229,7 @@ a{
 
     }
     #links-menu{
-        top:90%;
+        top:70%;
         left:75%
     }
     
