@@ -156,6 +156,7 @@ a{
 .carousel-img{
     display:none;
     max-width:20rem;
+    padding:5%
 }
 .carousel-img:first-of-type{
     display:block
