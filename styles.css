@@ -49,9 +49,6 @@ button{
     border-bottom: 2px solid rgb(128, 121, 121);
     padding-right:5%;
     max-height:4rem;
-    /* top:0;
-    left:0;
-    bottom:0; */
 }
 #modal-flex{
     display: flex;
@@ -106,8 +103,6 @@ p{
     align-self: flex-end;
 }
 #links-menu{
-    border-radius:2px;
-    background-color: rgba(68, 57, 57, 0.24);
     z-index: 1;
     position:relative;
     align-items: center;
@@ -140,7 +135,26 @@ a{
 #about li{
     list-style: none;
     color: rgb(133, 121, 103);
-    text-align: center;
+    text-decoration: underline;
+    text-align:center
+}
+#about li:hover{
+    cursor: pointer;
+}
+.back:hover{
+    cursor: pointer;
+}
+#life{
+    padding:0 15%;
+    display:none;
+}
+#work{
+    padding:0 10%;
+    display:none;
+}
+#hobbies{
+    padding:0 15%;
+    display:none;
 }
 #works{
     flex-flow:column wrap;
