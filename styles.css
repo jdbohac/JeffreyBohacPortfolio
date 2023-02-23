@@ -238,17 +238,14 @@ a{
         position:absolute;
         justify-content: flex-end;
         width:25rem;
-
-    }
-    #links-menu{
-       
-    }
-    
+    }    
     button{
         margin:5%;
     }
     .small-button{
         display:block;
+        width:4rem;
+        height:2.5rem;
     }
     .big-button{
         display:none;
