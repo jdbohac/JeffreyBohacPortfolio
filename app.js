@@ -36,23 +36,25 @@ const hideModal = () => {
 }
 const showHome = () => {
     hideModal();
-    $('#home').fadeIn(800)
+    $('#home').slideDown(800)
 }
 const showAbout = () =>{
     hideModal();
-    $('#about').fadeIn(800)
+    $('#about').slideDown(800)
 }
 const showWorks = () => {
     hideModal();
-    $('#works').fadeIn(800).css('display', 'flex')
+    $('#works').slideDown(800).css('display', 'flex')
 }
-const emBiggen = () => {
-    const $background = $('<div>').attr('id', 'big-background')
-    const $img = $('<img>').attr('url', `works${imgCounter}.jpeg`).attr('id', 'big-img')
-    $img.appendTo($background)
-    $('#works').append($background)
-
-
+let dropdownCounter = 2;
+const dropDown = () => {
+    // if(dropdownCounter % 2 == 0){
+        $('.link').slideToggle(200);
+        dropdownCounter++
+    // }else{
+    //     $('#links-menu').hide()
+    //     dropdownCounter++
+    //  }
 }
 
 
@@ -63,5 +65,5 @@ $('#works-button').on('click', showWorks)
 $('#right-button').on('click', nextImg)
 $('#left-button').on('click', lastImg)
 $('#right-resize-button').on('click', nextImg)
-// $('.carousel-img').on('click', emBiggen)
+$('#hburg-flex').on('click', dropDown)
 })

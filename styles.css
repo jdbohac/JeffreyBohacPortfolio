@@ -1,3 +1,4 @@
+
 body{
     display: flex;
     justify-content: center;
@@ -69,10 +70,6 @@ ul{
     text-align: left;
     line-height: 2em;
 }
-#about li{
-    list-style: none;
-    color: rgb(133, 121, 103);
-}
 
 p{
     color: rgb(143, 124, 94);
@@ -82,9 +79,9 @@ p{
 #hburg-flex{
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-end;
     margin-left: 5%;
-
+    padding-bottom:8%;
 }
 #hburg-flex:hover{
     cursor: pointer;
@@ -93,9 +90,38 @@ p{
     display: block;
     width:20px;
     height:4px;
-    background-color: rgba(0, 0, 0, 0.711);
+    background-color: rgba(68, 57, 57, 0.711);
     margin:2px;
     align-self: flex-end;
+}
+#links-menu{
+    margin-left:40%;
+    margin-top:10em;
+    background-color: rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    position:absolute;
+    margin-top: 20%;
+    transition: all .5s ease-in-out;
+}
+#links-menu:target{
+    height:auto;
+}
+.link{
+    padding:.3%;
+    border-bottom: 1px solid rgb(126, 108, 108);
+    width:7rem;
+    display:none;
+}
+.link:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:rgb(105, 93, 78);
+}
+.fa{
+    margin:.6em;
+    color:rgb(36, 28, 28);
 }
 #home{
     margin:auto;
@@ -104,6 +130,10 @@ p{
 #about{
     display: none;
     flex-flow:column;
+}
+#about li{
+    list-style: none;
+    color: rgb(133, 121, 103);
 }
 #works{
     flex-flow:column;
@@ -170,6 +200,11 @@ p{
         width:25rem;
 
     }
+    #links-menu{
+        margin-top:90%;
+        margin-left:65%;
+    }
+    
     button{
         align-self:flex-end;
         margin:5%
