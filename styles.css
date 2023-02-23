@@ -207,8 +207,7 @@ a{
         flex-flow:column;
         width:4rem;
         border-left: 2px solid rgb(128, 121, 121);
-        border-bottom: none;
-        border-radius: 45%;
+        border-bottom:none;
         align-self: flex-start;
         padding-right:1%
     }
