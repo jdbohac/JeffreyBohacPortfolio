@@ -78,6 +78,9 @@ body{
 .link:hover{
     cursor: pointer;
 }
+#colors-button:hover{
+    cursor: pointer;
+}
 #modal-flex{
     display: flex;
     flex-flow:row wrap;

@@ -38,6 +38,15 @@ const showModal = (modal) =>{
     hideModal();
     $(`${modal.data.text}`).fadeIn(800).css('display', 'flex')
 }
+const hideLinks = () => {
+    $('.link').slideUp(200)
+}
+const hideBurger = () => {
+    $('#hburg-flex').slideUp()
+}
+const showBurger = () => {
+    $('#hburg-flex').slideDown()
+}
 const dropDown = () => {
         $('.link').slideToggle(200);
 }
@@ -57,4 +66,7 @@ $('#right-big-button').on('click', nextImg)
 $('#left-big-button').on('click', lastImg)
 $('#right-resize-button').on('click', nextImg)
 $('#hburg-flex').on('click', dropDown)
+$('#hburg-flex').on('click', hideBurger)
+$('.modal-page').on('click', showBurger)
+$('.modal-page').on('click', hideLinks)
 })
