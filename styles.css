@@ -158,8 +158,8 @@ a{
 #buttons{
     display:flex;
     flex-flow: row;
-    margin:2%;
-    width:15rem;
+    margin-bottom:2%;
+    width:18rem;
     justify-content: space-between;
 }
 #works{
