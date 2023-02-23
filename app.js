@@ -40,11 +40,11 @@ const showHome = () => {
 }
 const showAbout = () =>{
     hideModal();
-    $('#about').slideDown(800)
+    $('#about').fadeIn(800)
 }
 const showWorks = () => {
     hideModal();
-    $('#works').slideDown(800).css('display', 'flex')
+    $('#works').fadeIn(800).css('display', 'flex')
 }
 let dropdownCounter = 2;
 const dropDown = () => {
