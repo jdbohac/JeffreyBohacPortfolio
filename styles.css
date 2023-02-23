@@ -40,8 +40,9 @@ button{
     display:flex;
     justify-content: space-around;
     background-color: rgb(194, 194, 214);
-    border-bottom: 1px solid rgb(128, 121, 121);
-    padding-right:2%;
+    border-bottom: 2px solid rgb(128, 121, 121);
+    border-radius: 20%;
+    padding-right:10%;
     /* top:0;
     left:0;
     bottom:0; */
@@ -81,6 +82,7 @@ p{
     display: flex;
     flex-flow: column;
     justify-content: center;
+    margin-left: 5%;
 
 }
 #hburg-flex:hover{
@@ -148,9 +150,11 @@ p{
     #header{
         flex-flow:column;
         width:4rem;
-        border-left: 1px solid rgb(153, 174, 191);
+        border-left: 2px solid rgb(128, 121, 121);
         border-bottom: none;
+        border-radius: 45%;
         align-self: flex-start;
+        padding:2%
     }
     #header li{
         line-height: 200%;
