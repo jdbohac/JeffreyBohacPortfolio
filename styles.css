@@ -4,6 +4,7 @@ body{
     justify-content: center;
     background-color: rgb(194, 194, 214);
     color:rgb(54, 48, 41);
+    font-family:Open sans;
 }
 
 button{
@@ -30,11 +31,14 @@ button{
     
 
 }
+#header li:active{
+    color:bisque;
+}
 #header li:hover{
     cursor: pointer;
 }
 #header li{
-    color: rgb(105, 93, 78);
+    color: rgb(138, 114, 105);
     margin:1rem;
     padding-bottom: 5%;
 }
@@ -64,7 +68,8 @@ button{
     text-align: center;
 }
 h1{
-    color:rgb(111, 102, 89)
+    color:rgb(148, 139, 126);
+    font-family:Tilt Prism;
 }
 ul{
     text-align: left;
@@ -90,14 +95,15 @@ p{
     display: block;
     width:20px;
     height:4px;
-    background-color: rgba(68, 57, 57, 0.711);
+    background-color: rgba(93, 88, 78, 0.807);
     margin:2px;
     align-self: flex-end;
 }
 #links-menu{
     margin-left:40%;
     margin-top:10em;
-    background-color: rgba(0, 0, 0, 0.24);
+    border-radius:2px;
+    background-color: rgba(68, 57, 57, 0.24);
     z-index: 1;
     position:absolute;
     margin-top: 20%;
@@ -196,7 +202,7 @@ a{
         border-bottom: none;
         border-radius: 45%;
         align-self: flex-start;
-        padding:1%
+        padding-right:1%
     }
     #header li{
         line-height: 200%;
@@ -212,7 +218,7 @@ a{
 
     }
     #links-menu{
-        margin-top:100%;
+        margin-top:90%;
         margin-left:65%;
     }
     

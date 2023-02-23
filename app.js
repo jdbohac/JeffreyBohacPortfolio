@@ -46,15 +46,8 @@ const showWorks = () => {
     hideModal();
     $('#works').fadeIn(800).css('display', 'flex')
 }
-let dropdownCounter = 2;
 const dropDown = () => {
-    // if(dropdownCounter % 2 == 0){
         $('.link').slideToggle(200);
-        dropdownCounter++
-    // }else{
-    //     $('#links-menu').hide()
-    //     dropdownCounter++
-    //  }
 }
 
 
