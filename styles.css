@@ -48,7 +48,7 @@ button{
     background-color: rgb(194, 194, 214);
     border-bottom: 2px solid rgb(128, 121, 121);
     padding-right:5%;
-    max-height:4rem;
+    max-height:5rem;
     /* top:0;
     left:0;
     bottom:0; */
@@ -110,15 +110,12 @@ p{
     background-color: rgba(68, 57, 57, 0.24);
     z-index: 1;
     position:relative;
-    align-self: flex-end;
+    align-items: center;
 }
-#links-menu:target{
-    height:auto;
-}
+
 .link{
-    padding:.3%;
+    display: flex;
     border-bottom: 1px solid rgb(126, 108, 108);
-    width:7rem;
     display:none;
 }
 .link:hover{
@@ -214,6 +211,7 @@ a{
         align-self: flex-start;
         padding-right:1%;
         max-height:none;
+        max-width:4rem;
     }
     #header li{
         line-height: 200%;
@@ -229,8 +227,7 @@ a{
 
     }
     #links-menu{
-        top:70%;
-        left:75%
+       
     }
     
     button{
