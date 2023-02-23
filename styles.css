@@ -134,11 +134,12 @@ a{
 #about li{
     list-style: none;
     color: rgb(133, 121, 103);
+    text-align: center;
 }
 #works{
-    flex-flow:column;
+    flex-flow:column wrap;
     display:none;
-    justify-content: flex-start;
+    align-content: middle;
 }
 #works-head{
     display:flex;
@@ -148,6 +149,16 @@ a{
     line-height: 2rem;
     flex:1;
 }
+#buttons{
+    display:flex;
+    flex-flow: row;
+    margin:2%;
+    width:15rem;
+    justify-content: space-between;
+}
+#works{
+    justify-content: center;
+}
 #works-body{
     display:flex;
     justify-content: center;
@@ -156,7 +167,6 @@ a{
 .carousel-img{
     display:none;
     max-width:20rem;
-    padding:5%
 }
 .carousel-img:first-of-type{
     display:block
@@ -207,14 +217,10 @@ a{
     }
     
     button{
-        align-self:flex-end;
-        margin:5%
+        margin:5%;
     }
     #works-body{
         flex-flow:column wrap;
-    }
-    #right-button{
-        display: none;
     }
     #right-resize-button{
         display:block;
