@@ -40,11 +40,11 @@ button{
 }
 #header{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: rgb(194, 194, 214);
     border-bottom: 2px solid rgb(128, 121, 121);
     border-radius: 20%;
-    padding-right:10%;
+    padding-right:5%;
     /* top:0;
     left:0;
     bottom:0; */
