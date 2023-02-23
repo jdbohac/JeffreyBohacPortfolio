@@ -35,6 +35,7 @@ button{
 #header li{
     color: rgb(105, 93, 78);
     margin:1rem;
+    padding-bottom: 5%;
 }
 #header{
     display:flex;
@@ -154,21 +155,24 @@ p{
         border-bottom: none;
         border-radius: 45%;
         align-self: flex-start;
-        padding:2%
+        padding:1%
     }
     #header li{
         line-height: 200%;
+        border-bottom: 1px solid black;
     }
     #main-flex{
         flex-flow:row-reverse wrap;
         margin:auto;
         margin-top: 20%;
         position:absolute;
+        justify-content: flex-end;
         width:25rem;
 
     }
     button{
         align-self:flex-end;
+        margin:5%
     }
     #works-body{
         flex-flow:column wrap;
@@ -182,5 +186,6 @@ p{
     .carousel-img{
         display:none;
         max-width:100%;
+        padding-bottom:5%;
     }
 }
