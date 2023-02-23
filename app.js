@@ -46,7 +46,14 @@ const showWorks = () => {
     hideModal();
     $('#works').fadeIn(800).css('display', 'flex')
 }
+const emBiggen = () => {
+    const $background = $('<div>').attr('id', 'big-background')
+    const $img = $('<img>').attr('url', `works${imgCounter}.jpeg`).attr('id', 'big-img')
+    $img.appendTo($background)
+    $('#works').append($background)
 
+
+}
 
 
 $(() => {
@@ -56,4 +63,5 @@ $('#works-button').on('click', showWorks)
 $('#right-button').on('click', nextImg)
 $('#left-button').on('click', lastImg)
 $('#right-resize-button').on('click', nextImg)
+// $('.carousel-img').on('click', emBiggen)
 })

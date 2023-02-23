@@ -11,7 +11,7 @@ button{
     border-radius: 100%;
     margin:15% 7% 0 7%;
     font-weight:700;
-    background-color: rgba(0, 0, 0, 0.736);
+    background-color: rgba(67, 63, 63, 0.736);
     color: rgb(219, 229, 238);
 }
 #right-resize-button{
@@ -40,7 +40,7 @@ button{
     display:flex;
     justify-content: space-around;
     background-color: rgb(194, 194, 214);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.559);
+    border-bottom: 1px solid rgb(128, 121, 121);
     padding-right:2%;
     /* top:0;
     left:0;
@@ -148,9 +148,12 @@ p{
     #header{
         flex-flow:column;
         width:4rem;
-        border-left: 1px solid black;
+        border-left: 1px solid rgb(153, 174, 191);
         border-bottom: none;
         align-self: flex-start;
+    }
+    #header li{
+        line-height: 200%;
     }
     #main-flex{
         flex-flow:row-reverse wrap;
