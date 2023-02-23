@@ -12,6 +12,7 @@ button{
     height: 1.5rem;
     border-radius: 40%;
     margin:15% 7% 0 7%;
+    font-size:25px;
     font-weight:700;
     border:none;
     background-color: rgba(136, 124, 139, 0.226);
