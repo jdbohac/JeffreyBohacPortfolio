@@ -232,6 +232,7 @@ button:active{
     width:18rem;
     height:15rem;
     box-shadow: 2px 2px 1rem;
+    color:rgba(58, 55, 60, 0.44);
     border-radius: 4%;
 }
 .project-display:first-of-type{
