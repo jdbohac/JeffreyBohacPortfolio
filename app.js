@@ -52,7 +52,7 @@ const dropDown = () => {
 }
 const makeBlue = () => {
     $('body').css('background-color', 'rgba(90, 90, 134)')
-    $('h1').css('color', ('rgb(208, 209, 188)'))
+    $('h1').css('color', ('rgb(231, 232, 211)'))
     $('#header li').css('color', 'rgb(208, 209, 188)')
 }
 const makePink = () => {
