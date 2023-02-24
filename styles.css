@@ -63,16 +63,21 @@ body{
 #links-menu{
     z-index: 1;
     position:relative;
+    margin:0;
 }
 .link{
     z-index:2;
-    border-bottom: 1px solid rgb(166, 157, 145);
+    /* border-bottom: 1px solid rgb(166, 157, 145); */
     color:rgb(39, 35, 30);
     display:none;
     margin-top:-3%;
-    margin-right:5%
+    margin-right:5%;
+    height:2.8rem;
 }
-
+.link p{
+    line-height:0;
+    font-size:14;
+}
 .link:hover{
     cursor: pointer;
 }
@@ -113,10 +118,8 @@ a{
     color:rgb(105, 93, 78);
 }
 .fa{
-    margin-left:5%;
-    margin-top: 10%;
+    padding:5%;
     color:rgb(175, 151, 43);
-    font-weight: bold;
 }
 #home{
     display:flex;
