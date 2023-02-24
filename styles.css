@@ -217,6 +217,7 @@ button:active{
     border-radius: 4%;
     color:rgba(58, 55, 60, 0.44);
     object-fit: contain;
+    background-color: rgba(98, 93, 102, 0.244);
 }
 .carousel-img:first-of-type{
     display:block
@@ -234,6 +235,7 @@ button:active{
     box-shadow: 2px 2px 1rem;
     color:rgba(58, 55, 60, 0.44);
     border-radius: 4%;
+    background-color: rgba(98, 93, 102, 0.244);
 }
 .project-display:first-of-type{
     display:block;
