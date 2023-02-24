@@ -74,7 +74,7 @@ const makeBlue = () => {
 const makeGrey = () => {
     $('body').animate({'background-color': 'rgb(79, 82, 99)'},700)
     $('h1').animate({'color': 'rgb(171, 191, 207)'}, 700)
-    $('#header li').animate({'color': 'rgb(171, 191, 207)'},700)
+    $('#header li').animate({'color': 'rgb(171, 191, 195)'},700)
 }
 const makePink = () => {
     $('body').animate({'background-color': 'rgb(236, 212, 224)'}, 1000)
