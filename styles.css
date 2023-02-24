@@ -5,7 +5,6 @@ body{
     background-color: rgb(236, 212, 224);
     color:rgb(192, 191, 106);
     font-family:Open sans;
-    color:rgb(231, 232, 211);
 }
 #right-resize-button{
     display:none;
@@ -220,6 +219,17 @@ button:active{
 }
 .carousel-img:first-of-type{
     display:block
+}
+#projects{
+    display:none;
+}
+.project-display{
+    
+}
+.project-display img{
+    object-fit: contain;
+    width:18rem;
+    height:18rem;
 }
 #colors{
     display: none;
