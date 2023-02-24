@@ -2,10 +2,9 @@
 body{
     display: flex;
     justify-content: center;
-    background-color: rgba(196, 101, 230, 0.177);
+    background-color: rgb(236, 212, 224);
     color:rgb(192, 191, 106);
     font-family:Open sans;
-    color:rgb(197, 182, 85)
 }
 #right-resize-button{
     display:none;
@@ -220,13 +219,13 @@ button:active{
     display: none;
 }
 #blue{
-    background-color:rgb(165, 165, 205);
+    background-color:rgba(90, 90, 134);
 }
 #blue:active{
     background-color:rgb(146, 142, 145);
 }
 #pink{
-    background-color:rgb(235, 217, 241);
+    background-color:rgb(236, 212, 224);
 }
 #pink:active{
     background-color:rgb(146, 142, 145);

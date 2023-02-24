@@ -56,7 +56,7 @@ const makeBlue = () => {
     $('#header li').css('color', 'rgb(225, 226, 188')
 }
 const makePink = () => {
-    $('body').css('background-color', 'rgba(196, 101, 230, 0.177)')
+    $('body').css('background-color', 'rgb(236, 212, 224)')
     $('h1').css('color', 'rgb(218, 180, 210)')
     $('#header li').css('color', 'rgb(138, 114, 105)')
 }
@@ -79,7 +79,6 @@ $('#right-button').on('click', nextImg)
 $('#left-button').on('click', lastImg)
 $('#right-big-button').on('click', nextImg)
 $('#left-big-button').on('click', lastImg)
-$('#right-resize-button').on('click', nextImg)
 $('#hburg-flex').on('click', dropDown)
 $('#hburg-flex').on('click', hideBurger)
 $('.modal-page').on('click', showBurger)
@@ -88,7 +87,5 @@ $('#colors-button').click({text: '#colors'}, showModal)
 $('#blue').on('click', makeBlue)
 $('#pink').on('click', makePink)
 $('#teal').on('click', makeTeal)
-
-
 })
 
