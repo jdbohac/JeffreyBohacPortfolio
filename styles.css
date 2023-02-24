@@ -30,7 +30,7 @@ body{
 #header li{
     color: rgb(138, 114, 105);
     padding-right:3%;
-    margin:1rem;
+    margin-left: 5%;
     padding-bottom: 5%;
 }
 #header{
@@ -295,6 +295,7 @@ button:active{
     #header li{
         line-height: 200%;
         border-bottom: 1px solid rgb(140, 138, 93);
+        margin-bottom: 1rem;
     }
     #main-flex{
         flex-flow:row-reverse wrap;
