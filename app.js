@@ -87,5 +87,8 @@ $('#colors-button').click({text: '#colors'}, showModal)
 $('#blue').on('click', makeBlue)
 $('#pink').on('click', makePink)
 $('#teal').on('click', makeTeal)
+
+
+// setInterval(nextImg,3500)
 })
 
