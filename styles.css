@@ -55,10 +55,10 @@ body{
 .hburg{
     display: block;
     width:20px;
-    height:2px;
+    height:1.5px;
     border:2px solid rgb(142, 132, 64);
     background-color: rgba(236, 212, 224, 0);
-    margin:2px;
+    margin:1px;
     align-self: flex-end;
 }
 #links-menu{
