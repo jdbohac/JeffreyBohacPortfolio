@@ -129,7 +129,7 @@ a{
     list-style: none;
     color: rgb(166, 157, 145);
     text-decoration: underline;
-    text-align:center;
+    text-align:left;
     line-height:3rem;
     font-size:24;
 }
@@ -183,7 +183,7 @@ button{
     font-size:25px;
     font-weight:700;
     border:none;
-    background-color: rgba(20, 136, 136, 0.506);
+    background-color: rgba(33, 66, 66, 0.313);
 }
 .carousel-button h2{
     line-height:0px;
@@ -192,7 +192,7 @@ button{
     color: rgba(222, 216, 119, 0.639);
 }
 button:active{
-    background-color: rgba(192, 69, 237, 0.065);
+    background-color: rgba(54, 51, 56, 0.586);
 }
 .small-button{
     display:none;
