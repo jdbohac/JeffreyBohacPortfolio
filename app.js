@@ -67,29 +67,29 @@ const dropDown = () => {
         $('.link').slideDown(200);
 }
 const makeBlue = () => {
-    $('body').animate({'background-color': 'rgba(90, 90, 134)'},700)
-    $('h1').animate({'color': 'rgb(231, 232, 211)'}, 700)
-    $('#header li').animate({'color': 'rgb(208, 209, 188)'},700)
+    $('body').css('background-color', 'rgba(90, 90, 134)')
+    $('h1').css('color', 'rgb(231, 232, 211)')
+    $('#header li').css('color', 'rgb(208, 209, 188)')
 }
 const makeGrey = () => {
-    $('body').animate({'background-color': 'rgb(79, 82, 99)'},700)
-    $('h1').animate({'color': 'rgb(171, 191, 207)'}, 700)
-    $('#header li').animate({'color': 'rgb(171, 191, 195)'},700)
+    $('body').css('background-color', 'rgb(79, 82, 99)')
+    $('h1').css('color', 'rgb(171, 191, 207)')
+    $('#header li').css('color', 'rgb(171, 191, 195)')
 }
 const makePink = () => {
-    $('body').animate({'background-color': 'rgb(236, 212, 224)'}, 1000)
-    $('h1').animate({'color': 'rgb(195, 155, 187)'}, 1000)
-    $('#header li').animate({'color': 'rgb(138, 114, 105)'}, 1000)
+    $('body').css('background-color', 'rgb(236, 212, 224)')
+    $('h1').css('color', 'rgb(195, 155, 187)')
+    $('#header li').css('color', 'rgb(138, 114, 105)')
 }
 const makeTeal = () => {
-    $('body').animate({'background-color': 'rgba(9, 109, 109)'}, 700)
-    $('h1').animate({'color': 'rgb(177, 161, 59)'}, 700)
-    $('#header li').animate({'color': 'rgb(197, 182, 85)'}, 700)
+    $('body').css('background-color', 'rgba(9, 109, 109)')
+    $('h1').css('color', 'rgb(177, 161, 59)')
+    $('#header li').css('color', 'rgb(197, 182, 85)')
 }
 const makeWhite = () => {
-    $('body').animate({'background-color': 'rgb(233, 230, 220)'}, 1000)
-    $('h1').animate({'color': 'rgb(42, 41, 50)'}, 1000)
-    $('#header li').animate({'color': 'rgb(42, 41, 50)'}, 1000)
+    $('body').css('background-color', 'rgb(233, 230, 220)')
+    $('h1').css('color', 'rgb(42, 41, 50)')
+    $('#header li').css('color', 'rgb(42, 41, 50)')
 }
 
 
