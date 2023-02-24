@@ -29,6 +29,7 @@ body{
 }
 #header li{
     color: rgb(138, 114, 105);
+    padding-right:3%;
     margin:1rem;
     padding-bottom: 5%;
 }
