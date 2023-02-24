@@ -308,6 +308,9 @@ button:active{
         justify-content: flex-end;
         width:25rem;
     }    
+    #about li{
+        font-size:25px;
+    }
     button{
         margin:5%;
     }
