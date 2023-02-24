@@ -64,7 +64,7 @@ const showBurger = () => {
     $('#hburg-flex').slideDown()
 }
 const dropDown = () => {
-        $('.link').slideToggle(200);
+        $('.link').slideDown(200);
 }
 const makeBlue = () => {
     $('body').css('background-color', 'rgba(90, 90, 134)')

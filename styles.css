@@ -33,7 +33,7 @@ body{
 }
 #header{
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
     border-bottom: 2px solid rgb(176, 173, 114);
     max-height:3rem;
     width:20rem;
@@ -63,15 +63,16 @@ body{
 #links-menu{
     z-index: 1;
     position:relative;
-    align-items: center;
 }
-
 .link{
     z-index:2;
     border-bottom: 1px solid rgb(166, 157, 145);
-    color:rgba(166, 157, 145);
+    color:rgb(39, 35, 30);
     display:none;
+    margin-top:-1%;
+    margin-right:5%
 }
+
 .link:hover{
     cursor: pointer;
 }
@@ -112,8 +113,10 @@ a{
     color:rgb(105, 93, 78);
 }
 .fa{
-    margin:.6em;
-    color:rgb(166, 157, 145);
+    margin-left:10%;
+    margin-top: 2%;
+    color:rgb(175, 151, 43);
+    font-weight: bold;
 }
 #home{
     display:flex;
