@@ -5,6 +5,7 @@ body{
     background-color: rgb(236, 212, 224);
     color:rgb(192, 191, 106);
     font-family:Open sans;
+    color:rgb(208, 209, 188);
 }
 #right-resize-button{
     display:none;
