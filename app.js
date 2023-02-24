@@ -13,7 +13,7 @@ const nextImg = () => {
         $('#works-carousel')
             .children()
             .eq(imgCounter)
-            .fadeIn(800)
+            .fadeIn(370)
             .css('display', 'flex')
 }
 const lastImg = () => {
@@ -28,7 +28,7 @@ const lastImg = () => {
         $('#works-carousel')
             .children()
             .eq(imgCounter)
-            .fadeIn(800)
+            .fadeIn(370)
             .css('display', 'flex')
 }
 const hideModal = () => {
