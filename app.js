@@ -31,6 +31,22 @@ const lastImg = () => {
             .fadeIn(370)
             .css('display', 'flex')
 }
+let projectsCounter=0
+const nextProj = () => {
+    $('#projects-body')
+        .children('div')
+        .eq(projectsCounter)
+        .css('display', 'none')
+        projectsCounter++;
+        if(projectsCounter > $('#projects-body').children('div').length-1){
+            projectsCounter = 0;
+        }
+        $('#projects-body')
+            .children('div')
+            .eq(projectsCounter)
+            .fadeIn(500)
+            .css('display', 'block')
+}
 const hideModal = () => {
     $('.modal-page').css('display', 'none')
 }
@@ -88,7 +104,7 @@ $('#colors-button').click({text: '#colors'}, showModal)
 $('#blue').on('click', makeBlue)
 $('#pink').on('click', makePink)
 $('#teal').on('click', makeTeal)
-
+setInterval(nextProj, 6000)
 
 // setInterval(nextImg,3500)
 })

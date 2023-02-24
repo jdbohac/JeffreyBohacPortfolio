@@ -224,12 +224,18 @@ button:active{
 #projects{
     display:none;
 }
+.project-display{
+    display:none;
+}
 .project-display img{
     object-fit: contain;
     width:18rem;
     height:15rem;
     box-shadow: 2px 2px 1rem;
     border-radius: 4%;
+}
+.project-display:first-of-type{
+    display:block;
 }
 #colors{
     display: none;
