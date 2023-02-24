@@ -34,7 +34,7 @@ body{
 }
 #header{
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     border-bottom: 2px solid rgb(176, 173, 114);
     padding-right:5%;
     max-height:4rem;
