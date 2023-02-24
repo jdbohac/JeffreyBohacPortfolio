@@ -229,7 +229,7 @@ button:active{
 .project-display img{
     object-fit: contain;
     width:18rem;
-    height:18rem;
+    height:15rem;
 }
 #colors{
     display: none;
