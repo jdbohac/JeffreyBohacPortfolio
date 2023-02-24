@@ -3,7 +3,7 @@ body{
     display: flex;
     justify-content: center;
     background-color: rgb(236, 212, 224);
-    color:rgb(192, 191, 106);
+    color:rgb(178, 170, 86);
     font-family:Open sans;
 }
 #right-resize-button{
@@ -55,8 +55,9 @@ body{
 .hburg{
     display: block;
     width:20px;
-    height:4px;
-    background-color: rgb(176, 173, 114);
+    height:2px;
+    border:2px solid rgb(142, 132, 64);
+    background-color: rgba(236, 212, 224, 0);
     margin:2px;
     align-self: flex-end;
 }
@@ -223,13 +224,12 @@ button:active{
 #projects{
     display:none;
 }
-.project-display{
-    
-}
 .project-display img{
     object-fit: contain;
     width:18rem;
     height:15rem;
+    box-shadow: 2px 2px 1rem;
+    border-radius: 4%;
 }
 #colors{
     display: none;
