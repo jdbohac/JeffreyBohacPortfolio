@@ -129,7 +129,9 @@ a{
     list-style: none;
     color: rgb(166, 157, 145);
     text-decoration: underline;
-    text-align:center
+    text-align:center;
+    line-height:3rem;
+    font-size:24;
 }
 #about li:hover{
     cursor: pointer;
@@ -203,14 +205,16 @@ button:active{
 #works-body{
     display:flex;
     justify-content: center;
-    flex:2;
+    flex: 2;
 }
 .carousel-img{
     display:none;
-    max-width:20rem;
-    border-radius:4px;
+    width:25rem;
+    height:25rem;
     box-shadow: 2px 2px 1rem;
-    color:rgba(123, 21, 121, 0.44);
+    border-radius: 4%;
+    color:rgba(58, 55, 60, 0.44);
+    object-fit: contain;
 }
 .carousel-img:first-of-type{
     display:block
@@ -295,7 +299,8 @@ button:active{
     .carousel-img{
         border-radius: 4px;
         display:none;
-        max-width:100%;
+        width:18rem;
+        height:18rem;
         margin-bottom: 2rem;
     }
 }
