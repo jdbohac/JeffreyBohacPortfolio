@@ -297,7 +297,7 @@ button:active{
     #header li{
         line-height: 200%;
         border-bottom: 1px solid rgb(140, 138, 93);
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
     #main-flex{
         flex-flow:row-reverse wrap;
