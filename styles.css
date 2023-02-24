@@ -63,13 +63,14 @@ body{
 #links-menu{
     z-index: 1;
     position:relative;
+    overflow: visible;
 }
 .link{
     z-index:2;
     border-bottom: 1px solid rgb(166, 157, 145);
     color:rgb(39, 35, 30);
     display:none;
-    margin-top:-1%;
+    margin-top:-3%;
     margin-right:5%
 }
 
@@ -113,8 +114,8 @@ a{
     color:rgb(105, 93, 78);
 }
 .fa{
-    margin-left:10%;
-    margin-top: 2%;
+    margin-left:5%;
+    margin-top: 10%;
     color:rgb(175, 151, 43);
     font-weight: bold;
 }
