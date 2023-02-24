@@ -50,6 +50,21 @@ const showBurger = () => {
 const dropDown = () => {
         $('.link').slideToggle(200);
 }
+const makeBlue = () => {
+    $('body').css('background-color', 'rgba(90, 90, 134)')
+    $('h1').css('color', ('rgb(225, 226, 188'))
+    $('#header li').css('color', 'rgb(225, 226, 188')
+}
+const makePink = () => {
+    $('body').css('background-color', 'rgba(196, 101, 230, 0.177)')
+    $('h1').css('color', 'rgb(218, 180, 210)')
+    $('#header li').css('color', 'rgb(138, 114, 105)')
+}
+const makeTeal = () => {
+    $('body').css('background-color', 'rgba(9, 109, 109)')
+    $('h1').css('color', 'rgb(197, 182, 85)')
+    $('#header li').css('color', 'rgb(197, 182, 85)')
+}
 
 
 $(() => {
@@ -69,4 +84,11 @@ $('#hburg-flex').on('click', dropDown)
 $('#hburg-flex').on('click', hideBurger)
 $('.modal-page').on('click', showBurger)
 $('.modal-page').on('click', hideLinks)
+$('#colors-button').click({text: '#colors'}, showModal)
+$('#blue').on('click', makeBlue)
+$('#pink').on('click', makePink)
+$('#teal').on('click', makeTeal)
+
+
 })
+

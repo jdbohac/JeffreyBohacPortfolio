@@ -5,6 +5,7 @@ body{
     background-color: rgba(196, 101, 230, 0.177);
     color:rgb(192, 191, 106);
     font-family:Open sans;
+    color:rgb(197, 182, 85)
 }
 #right-resize-button{
     display:none;
@@ -42,14 +43,11 @@ body{
 #links-container{
     display: flex;
     flex-flow: column;
-    overflow:visible;
     justify-content: center;
 }
 #hburg-flex{
     display: flex;
     flex-flow: column;
-    justify-content: center;
-    margin-left: 5%;
     padding-bottom:8%;
 }
 #hburg-flex:hover{
@@ -59,7 +57,7 @@ body{
     display: block;
     width:20px;
     height:4px;
-    background-color: rgba(93, 88, 78, 0.807);
+    background-color: rgb(176, 173, 114);
     margin:2px;
     align-self: flex-end;
 }
@@ -70,7 +68,7 @@ body{
 }
 
 .link{
-    display: flex;
+    z-index:2;
     border-bottom: 1px solid rgb(166, 157, 145);
     color:rgba(166, 157, 145);
     display:none;
@@ -85,6 +83,7 @@ body{
     display: flex;
     flex-flow:row wrap;
     align-items: center;
+    z-index: 1;
     flex:1;
     padding:5%; 
 }
@@ -97,6 +96,7 @@ body{
 h1{
     color:rgb(218, 180, 210);
     font-family:Tilt Prism;
+    font-size: 50px;
 }
 ul{
     text-align: left;
@@ -182,16 +182,16 @@ button{
     font-size:25px;
     font-weight:700;
     border:none;
-    background-color: rgba(6, 87, 87, 0.506);
+    background-color: rgba(20, 136, 136, 0.506);
 }
 .carousel-button h2{
     line-height:0px;
     font-size:25px;
     text-align:center;
-    color: rgba(193, 190, 136, 0.639);
+    color: rgba(222, 216, 119, 0.639);
 }
 button:active{
-    background-color: rgba(192, 69, 237, 0.018);
+    background-color: rgba(192, 69, 237, 0.065);
 }
 .small-button{
     display:none;
@@ -216,8 +216,27 @@ button:active{
 .carousel-img:first-of-type{
     display:block
 }
-
-
+#colors{
+    display: none;
+}
+#blue{
+    background-color:rgb(165, 165, 205);
+}
+#blue:active{
+    background-color:rgb(146, 142, 145);
+}
+#pink{
+    background-color:rgb(235, 217, 241);
+}
+#pink:active{
+    background-color:rgb(146, 142, 145);
+}
+#teal{
+    background-color: rgba(9, 109, 109, 0.506);
+}
+#teal:active{
+    background-color:rgb(146, 142, 145);
+}
 
 
 
@@ -281,3 +300,4 @@ button:active{
         margin-bottom: 2rem;
     }
 }
+
