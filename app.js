@@ -57,7 +57,7 @@ const makeBlue = () => {
 }
 const makePink = () => {
     $('body').css('background-color', 'rgb(236, 212, 224)')
-    $('h1').css('color', 'rgb(218, 180, 210)')
+    $('h1').css('color', 'rgb(195, 155, 187)')
     $('#header li').css('color', 'rgb(138, 114, 105)')
 }
 const makeTeal = () => {

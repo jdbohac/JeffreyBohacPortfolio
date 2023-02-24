@@ -93,7 +93,7 @@ body{
     text-align: center;
 }
 h1{
-    color:rgb(218, 180, 210);
+    color:rgb(195, 155, 187);
     font-family:Tilt Prism;
     font-size: 50px;
 }
@@ -118,8 +118,8 @@ a{
 #home{
     display:flex;
     flex-flow:column;
-    align-self: flex-start;
-    padding:10%;
+    align-self: center;
+    padding:5%;
 }
 #about{
     display: none;
