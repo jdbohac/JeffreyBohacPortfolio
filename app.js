@@ -71,6 +71,11 @@ const makeBlue = () => {
     $('h1').animate({'color': 'rgb(231, 232, 211)'}, 700)
     $('#header li').animate({'color': 'rgb(208, 209, 188)'},700)
 }
+const makeGrey = () => {
+    $('body').animate({'background-color': 'rgb(79, 82, 99)'},700)
+    $('h1').animate({'color': 'rgb(171, 191, 207)'}, 700)
+    $('#header li').animate({'color': 'rgb(171, 191, 207)'},700)
+}
 const makePink = () => {
     $('body').animate({'background-color': 'rgb(236, 212, 224)'}, 1000)
     $('h1').animate({'color': 'rgb(195, 155, 187)'}, 1000)
@@ -80,6 +85,11 @@ const makeTeal = () => {
     $('body').animate({'background-color': 'rgba(9, 109, 109)'}, 700)
     $('h1').animate({'color': 'rgb(177, 161, 59)'}, 700)
     $('#header li').animate({'color': 'rgb(197, 182, 85)'}, 700)
+}
+const makeWhite = () => {
+    $('body').animate({'background-color': 'rgb(233, 230, 220)'}, 1000)
+    $('h1').animate({'color': 'rgb(42, 41, 50)'}, 1000)
+    $('#header li').animate({'color': 'rgb(42, 41, 50)'}, 1000)
 }
 
 
@@ -104,6 +114,8 @@ $('#colors-button').click({text: '#colors'}, showModal)
 $('#blue').on('click', makeBlue)
 $('#pink').on('click', makePink)
 $('#teal').on('click', makeTeal)
+$('#grey').on('click', makeGrey)
+$('#white').on('click', makeWhite)
 setInterval(nextProj, 6000)
 
 // setInterval(nextImg,3500)
