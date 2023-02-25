@@ -124,12 +124,13 @@ a{
 #home{
     display:flex;
     flex-flow:column;
-    align-self: center;
     padding:5%;
+    margin: auto;
 }
 #about{
     display: none;
     flex-flow:column;
+    margin: auto;
 }
 #about li{
     list-style: none;
@@ -293,7 +294,7 @@ button:active{
 
 @media(max-width: 600px){
     h1{
-        font-size: 45px;
+        font-size: 37px;
     }
     h4{
         font-size: 45px;
@@ -325,7 +326,6 @@ button:active{
         margin-top: 20%;
         position:absolute;
         align-items: center;
-        width:25rem;
     }    
     .link p{
         font-size: 15px;
