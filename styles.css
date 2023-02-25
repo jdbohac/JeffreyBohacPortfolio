@@ -213,13 +213,13 @@ button:active{
 #works-body{
     display:flex;
     justify-content: center;
-    flex: 2;
 }
 
 .carousel-img{
     display:none;
-    width:25rem;
-    height:25rem;
+    max-width:25rem;
+    max-height:25rem;
+    flex:1;
     box-shadow: 2px 2px 1rem;
     border-radius: 4%;
     color:rgba(58, 55, 60, 0.44);
@@ -239,7 +239,7 @@ button:active{
 }
 .project-display img{
     object-fit: contain;
-    width:18rem;
+    width:15rem;
     height:15rem;
     box-shadow: 2px 2px 1rem;
     color:rgba(58, 55, 60, 0.44);
@@ -312,7 +312,7 @@ button:active{
         align-self: flex-start;
         padding-right:1%;
         max-height:none;
-        max-width:4rem;
+        width:3rem;
     }
     #header li{
         line-height: 200%;
@@ -324,7 +324,7 @@ button:active{
         flex-flow:row-reverse wrap;
         margin:auto;
         margin-top: 20%;
-        position:absolute;
+        position:relative;
         align-items: center;
     }    
     .link p{
@@ -346,16 +346,14 @@ button:active{
     }
     #works-body{
         flex-flow:column wrap;
-        height:70rem;
     }
     #right-resize-button{
         display:block;
     }
     .carousel-img{
         border-radius: 4px;
-        display:none;
         width:17rem;
-        height:17rem;
+        height:18rem;
         margin-bottom: 2rem;
     }
 }
