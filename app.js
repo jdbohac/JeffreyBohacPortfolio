@@ -52,10 +52,15 @@ const hideModal = () => {
 }
 const showModal = (modal) =>{
     hideModal();
-    $(`${modal.data.text}`).fadeIn(800).css('display', 'flex')
+    $(`${modal.data.id}`).fadeIn(800).css('display', 'flex')
 }
 const hideLinks = () => {
     $('.link').slideUp(200)
+}
+const showAbout = (modal) => {
+    hideModal();
+    $(`${modal.data.id}-box`).load(`about.html ${modal.data.id}-text`)
+    $(`${modal.data.id}`).fadeIn(800).css('display', 'flex')
 }
 const hideBurger = () => {
     $('#hburg-flex').slideUp()
@@ -94,14 +99,15 @@ const makeWhite = () => {
 
 
 $(() => {
-$('#home-button').click({text: '#home'}, showModal)
-$('#about-button').click({text: '#about'}, showModal)
-$('.back').click({text: '#about'}, showModal)
-$('#life-button').click({text: '#life'}, showModal)
-$('#work-button').click({text: '#work'}, showModal)
-$('#hobbies-button').click({text: '#hobbies'}, showModal)
-$('#works-button').click({text: '#works'}, showModal)
-$('#projects-button').click({text: '#projects'}, showModal)
+    
+$('#home-button').click({id: '#home'}, showModal)
+$('#about-button').click({id: '#about'}, showModal)
+$('.back').click({id: '#about'}, showModal)
+$('#life-button').click({id: '#life'}, showAbout)
+$('#work-button').click({id: '#work'}, showAbout)
+$('#hobbies-button').click({id: '#hobbies'}, showAbout)
+$('#works-button').click({id: '#works'}, showModal)
+$('#projects-button').click({id: '#projects'}, showModal)
 $('#right-button').on('click', nextImg)
 $('#left-button').on('click', lastImg)
 $('#right-big-button').on('click', nextImg)
@@ -110,7 +116,7 @@ $('#hburg-flex').on('click', dropDown)
 $('#hburg-flex').on('click', hideBurger)
 $('.modal-page').on('click', showBurger)
 $('.modal-page').on('click', hideLinks)
-$('#colors-button').click({text: '#colors'}, showModal)
+$('#colors-button').click({id: '#colors'}, showModal)
 $('#blue').on('click', makeBlue)
 $('#pink').on('click', makePink)
 $('#teal').on('click', makeTeal)
