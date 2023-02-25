@@ -174,6 +174,11 @@ a{
     line-height: 2rem;
     flex:1;
 }
+#works-carousel{
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+}
 #buttons{
     display:flex;
     flex-flow: row;
@@ -181,12 +186,12 @@ a{
     width:18rem;
     justify-content: space-between;
 }
+
 button{
     display: block;
     width: 2rem;
     height: 1.5rem;
     border-radius: 40%;
-    margin:15% 7%;
     font-size:25px;
     font-weight:700;
     border:none;
@@ -217,8 +222,8 @@ button:active{
 
 .carousel-img{
     display:none;
-    max-width:25rem;
-    max-height:25rem;
+    width:25rem;
+    height:25rem;
     flex:1;
     box-shadow: 2px 2px 1rem;
     border-radius: 4%;
@@ -226,7 +231,7 @@ button:active{
     object-fit: contain;
     background-color: rgba(178, 174, 182, 0.244);
     padding: 3% 3%;
-    margin-right: 2rem;
+    margin-right: auto;
 }
 .carousel-img:first-of-type{
     display:block
@@ -325,7 +330,6 @@ button:active{
         margin:auto;
         margin-top: 20%;
         position:relative;
-        align-items: center;
     }    
     .link p{
         font-size: 15px;
@@ -347,12 +351,17 @@ button:active{
     #works-body{
         flex-flow:column wrap;
     }
+    #works-head{
+        width:15rem;
+        height:15rem;
+    }
     #right-resize-button{
         display:block;
     }
     .carousel-img{
+        flex-shrink: 1;
         border-radius: 4px;
-        width:15rem;
+        max-width:15rem;
         height:16rem;
         margin-bottom: 2rem;
     }
