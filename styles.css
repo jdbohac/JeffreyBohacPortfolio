@@ -210,9 +210,9 @@ button:active{
     display:none;
 }
 .big-button{
-    width:8rem;
+    width:4rem;
     height:2.5rem;
-    margin-top:-15%
+    margin-top:-15%;
 
 }
 #works-body{
@@ -306,8 +306,8 @@ button:active{
         margin-bottom: 0;
     }
     #modal-flex{
-        justify-content: flex-end;
-        flex:2
+        justify-content: center;
+        flex:1
     }
     #header{
         flex-flow:column;
@@ -315,7 +315,6 @@ button:active{
         border-left: 2px solid rgb(176, 173, 114);
         border-bottom:none;
         align-self: flex-start;
-        padding-right:1%;
         max-height:none;
         width:3rem;
     }
@@ -326,7 +325,7 @@ button:active{
         font-size: 14px;
     }
     #main-flex{
-        flex-flow:row-reverse wrap;
+        flex-flow:row-reverse nowrap;
         margin:auto;
         margin-top: 20%;
         position:relative;
