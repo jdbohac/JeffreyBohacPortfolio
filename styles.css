@@ -300,7 +300,7 @@ button:active{
         margin-bottom: 0;
     }
     #modal-flex{
-        justify-content: flex-start;
+        justify-content: flex-end;
         flex:2
     }
     #header{
