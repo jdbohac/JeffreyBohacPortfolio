@@ -305,7 +305,7 @@ button:active{
     }
     #header{
         flex-flow:column;
-        width:4rem;
+        width:3rem;
         border-left: 2px solid rgb(176, 173, 114);
         border-bottom:none;
         align-self: flex-start;
@@ -317,6 +317,7 @@ button:active{
         line-height: 200%;
         border-bottom: 1px solid rgb(140, 138, 93);
         margin-bottom: 2rem;
+        font-size: 14px;
     }
     #main-flex{
         flex-flow:row-reverse wrap;
@@ -326,6 +327,9 @@ button:active{
         align-items: center;
         width:25rem;
     }    
+    .link p{
+        font-size: 15px;
+    }
     #about li{
         font-size:25px;
     }
