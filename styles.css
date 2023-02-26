@@ -331,7 +331,7 @@ button:active{
     #main-flex{
         flex-flow:row-reverse nowrap;
         margin:auto;
-        margin-top: 20%;
+        margin-top: 35%;
         position:relative;
     }    
     .link p{
