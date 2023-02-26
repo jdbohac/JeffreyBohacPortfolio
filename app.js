@@ -60,9 +60,13 @@ const showModal = (modal) =>{
     $(`${modal.data.id}`).fadeIn(800).css('display', 'flex')
 }
 //loads paragraph from about.html and displays it in appropriate 'about me' page
+//accepts modal id as argument
 const showAbout = (modal) => {
     hideModal();
+    //grabs box in which text will be  inserted with id-box
+    //loads 'p' element from about.html with id-text
     $(`${modal.data.id}-box`).load(`about.html ${modal.data.id}-text`)
+    //displays modal w/text
     $(`${modal.data.id}`).fadeIn(800).css('display', 'flex')
 }
 const dropDown = () => {
@@ -114,7 +118,9 @@ $('.back').click({id: '#about'}, showModal)
 //showAbout function loads paragraph text from about.html to appropriate pages
 $('#life-button').click({id: '#life'}, showAbout)
 $('#work-button').click({id: '#work'}, showAbout)
+$('#dev-button').click({id: '#development'}, showAbout)
 $('#hobbies-button').click({id: '#hobbies'}, showAbout)
+//more modal pages
 $('#works-button').click({id: '#works'}, showModal)
 $('#projects-button').click({id: '#projects'}, showModal)
 //carousel buttons
