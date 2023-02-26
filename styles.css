@@ -350,8 +350,6 @@ button:active{
     #works-body{
         flex-flow:column wrap;
     }
-    #works-carousel{
-    }
     #right-resize-button{
         display:block;
     }

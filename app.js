@@ -103,6 +103,8 @@ const makeWhite = () => {
     $('h1').css('color', 'rgb(42, 41, 50)')
     $('#header li').css('color', 'rgb(42, 41, 50)')
 }
+
+//enough functions it's time for events!
 $(() => {
     //showModal is called to display the current page based on div id
 $('#home-button').click({id: '#home'}, showModal)
