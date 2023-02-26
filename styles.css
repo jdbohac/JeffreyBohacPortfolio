@@ -311,6 +311,7 @@ button:active{
         margin-bottom: 0;
     }
     #modal-flex{
+        padding:1%;
         justify-content: center;
         flex:1
     }
