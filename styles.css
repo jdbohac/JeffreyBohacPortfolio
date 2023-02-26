@@ -173,7 +173,7 @@ a{
 }
 #works-head{
     display:flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     align-items: center;
     font-size: 20px;
     line-height: 2rem;
@@ -181,12 +181,12 @@ a{
 }
 #works-carousel{
     display:flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     align-items: center;
 }
 #buttons{
     display:flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     margin-bottom:2%;
     width:18rem;
     justify-content: space-between;
@@ -197,7 +197,7 @@ button{
     width: 2rem;
     height: 1.5rem;
     border-radius: 40%;
-    font-size:25px;
+    font-size:4rem;
     font-weight:700;
     border:none;
     background-color: rgba(151, 146, 155, 0.244);
@@ -235,7 +235,7 @@ button:active{
     color:rgba(58, 55, 60, 0.44);
     object-fit: contain;
     background-color: rgba(178, 174, 182, 0.244);
-    padding: 3% 3%;
+    padding: 1% 1%;
     margin:auto;
 }
 .carousel-img:first-of-type{
@@ -333,10 +333,8 @@ button:active{
         font-size: 14px;
     }
     #main-flex{
-        flex-flow:row-reverse nowrap;
-        margin:auto;
+        flex-flow:row-reverse wrap;
         margin-top: 35%;
-        position:relative;
     }    
     .link p{
         font-size: 15px;
@@ -363,8 +361,9 @@ button:active{
     }
     .carousel-img{
         border-radius: 4px;
+        object-position: center;
+        min-width:16rem;
         width:18rem;
-        height:18rem;
         align-items: center;
     }
 }
