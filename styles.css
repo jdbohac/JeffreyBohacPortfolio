@@ -223,7 +223,7 @@ button:active{
 .carousel-img{
     display:none;
     width:25rem;
-    height:25rem;
+    height:20rem;
     flex:1;
     box-shadow: 2px 2px 1rem;
     border-radius: 4%;
@@ -350,19 +350,17 @@ button:active{
     #works-body{
         flex-flow:column wrap;
     }
-    #works-head{
-        width:15rem;
-        height:15rem;
+    #works-carousel{
     }
     #right-resize-button{
         display:block;
     }
     .carousel-img{
-        flex-shrink: 1;
         border-radius: 4px;
-        max-width:15rem;
-        height:16rem;
         margin-bottom: 2rem;
+        width:18rem;
+        height:10rem;
+        margin:auto;
     }
 }
 
