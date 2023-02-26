@@ -1,7 +1,11 @@
 
+//initiate variables for carousels
 let imgCounter = 0;
+let projectsCounter=0;
 // works page carousel next image function
 const nextImg = () => {
+    //hide current img in carousel
+    //increment counter to select next img
     $('#works-carousel')
         .children()
         .eq(imgCounter)
@@ -11,6 +15,7 @@ const nextImg = () => {
         if(imgCounter > $('#works-carousel').children().length -1){
             imgCounter = 0;
         }
+    //display currently selected img
         $('#works-carousel')
             .children()
             .eq(imgCounter)
@@ -19,14 +24,19 @@ const nextImg = () => {
 }
 // works page carousel last image
 const lastImg = () => {
+    //hide currently selected img
+    //decrement counter to select previous img
     $('#works-carousel')
         .children()
         .eq(imgCounter)
         .css('display', 'none')
         imgCounter--;
+    //if previous image is the first in the 
+    //div, selects last img in the carousel div
         if(imgCounter < 0){ 
             imgCounter = $('#works-carousel').children().length -1;
         }
+    //display currently selected img
         $('#works-carousel')
             .children()
             .eq(imgCounter)
@@ -34,16 +44,18 @@ const lastImg = () => {
             .css('display', 'block')
 }
 //project carousel only goes one way
-let projectsCounter=0
 const nextProj = () => {
+    //hides currently displayed project
     $('#projects-body')
         .children('div')
         .eq(projectsCounter)
         .css('display', 'none')
         projectsCounter++;
+        //if there are no more reset counter
         if(projectsCounter > $('#projects-body').children('div').length-1){
             projectsCounter = 0;
         }
+        //dipslay currently selected project
         $('#projects-body')
             .children('div')
             .eq(projectsCounter)
