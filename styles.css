@@ -359,9 +359,9 @@ button:active{
     }
     .carousel-img{
         border-radius: 4px;
-        width:16rem;
-        height:16rem;
-        margin-right:1.1rem;
+        width:18rem;
+        height:18rem;
+        align-items: center;
     }
 }
 

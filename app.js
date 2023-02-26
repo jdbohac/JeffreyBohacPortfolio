@@ -31,7 +31,7 @@ const lastImg = () => {
             .children()
             .eq(imgCounter)
             .fadeIn(370)
-            .css('display', 'flex')
+            .css('display', 'block')
 }
 //project carousel only goes one way
 let projectsCounter=0
