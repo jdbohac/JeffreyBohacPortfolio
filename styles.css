@@ -91,6 +91,7 @@ body{
     z-index: 1;
     flex:1;
     padding:1%; 
+    margin-right: 10%;
 }
 .modal-page{
     display:none;
@@ -321,6 +322,9 @@ button:active{
         align-self: flex-start;
         max-height:none;
         width:3rem;
+        position: fixed;
+        margin-left: 85%;
+        z-index: 2;
     }
     #header li{
         line-height: 200%;

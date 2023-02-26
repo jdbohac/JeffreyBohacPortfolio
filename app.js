@@ -2,7 +2,7 @@
 //initiate variables for carousels
 let imgCounter = 0;
 let projectsCounter=0;
-// works page carousel next image function
+// 'works' page carousel next image function
 const nextImg = () => {
     //hide current img in carousel
     //increment counter to select next img
