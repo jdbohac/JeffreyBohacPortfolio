@@ -359,10 +359,9 @@ button:active{
     }
     .carousel-img{
         border-radius: 4px;
-        margin-bottom: 2rem;
         width:16rem;
         height:16rem;
-        margin:auto;
+        margin-right:1.1rem;
     }
 }
 
