@@ -323,7 +323,7 @@ button:active{
         padding:1%;
         justify-content: center;
         flex:1;
-        margin-top:15%
+        margin-top:50%
     }
     #header{
         flex-flow:row;
