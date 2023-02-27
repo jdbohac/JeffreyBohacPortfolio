@@ -308,11 +308,9 @@ button:active{
         margin-bottom: 0;
     }
     #modal-flex{
-        margin-top:-10%;
         padding:1%;
         margin-right:15%;
         justify-content: center;
-        min-height:30rem;
         flex:1
     }
     #header{
