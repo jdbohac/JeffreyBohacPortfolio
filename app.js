@@ -83,7 +83,7 @@ const showAbout = (modal) => {
 }
 const dropDown = () => {
     //opens link menu
-        $('.link').slideDown(200);
+        $('#links-menu').slideDown(200);
     //hides hamburger bars    
         $('#hburg-flex').slideUp()
 }
@@ -91,31 +91,36 @@ const hideLinks = () => {
     //hamburger reappears
     $('#hburg-flex').slideDown()
     //hides links menu
-    $('.link').slideUp(200)
+    $('#links-menu').slideUp(200)
 }
 // 'make' functions change css rules for background and text colors
 const makeBlue = () => {
     $('body').css('background-color', 'rgba(90, 90, 134)')
+    $('#header').css('background-color', 'rgba(90, 90, 134)')
     $('h1').css('color', 'rgb(231, 232, 211)')
     $('#header li').css('color', 'rgb(208, 209, 188)')
 }
 const makeGrey = () => {
     $('body').css('background-color', 'rgb(79, 82, 99)')
+    $('#header').css('background-color', 'rgb(79, 82, 99)')
     $('h1').css('color', 'rgb(171, 191, 207)')
     $('#header li').css('color', 'rgb(171, 191, 195)')
 }
 const makePink = () => {
     $('body').css('background-color', 'rgb(236, 212, 224)')
+    $('#header').css('background-color', 'rgb(236, 212, 224)')
     $('h1').css('color', 'rgb(195, 155, 187)')
     $('#header li').css('color', 'rgb(138, 114, 105)')
 }
 const makeTeal = () => {
     $('body').css('background-color', 'rgba(9, 109, 109)')
+    $('#header').css('background-color', 'rgba(9, 109, 109)')
     $('h1').css('color', 'rgb(177, 161, 59)')
     $('#header li').css('color', 'rgb(197, 182, 85)')
 }
 const makeWhite = () => {
     $('body').css('background-color', 'rgb(233, 230, 220)')
+    $('#header').css('background-color', 'rgb(233, 230, 220)')
     $('h1').css('color', 'rgb(42, 41, 50)')
     $('#header li').css('color', 'rgb(42, 41, 50)')
 }

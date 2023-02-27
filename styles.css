@@ -32,6 +32,7 @@ body{
 #header{
     display:flex;
     justify-content: flex-end;
+    background-color: rgb(236, 212, 224);
     border-bottom: 2px solid rgb(176, 173, 114);
     max-height:3rem;
     width:20rem;
@@ -40,11 +41,11 @@ body{
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: center;
 }
 #hburg-flex{
     display: flex;
     flex-flow: column;
-    padding-bottom:8%;
 }
 #hburg-flex:hover{
     cursor: pointer;
@@ -56,23 +57,22 @@ body{
     border:2px solid rgb(142, 132, 64);
     background-color: rgba(236, 212, 224, 0);
     margin:1px;
-    align-self: flex-end;
+    align-self: center;
 }
 #links-menu{
+    display:none;
     z-index: 1;
     position:relative;
     margin:0;
 }
 .link{
     z-index:2;
-    /* border-bottom: 1px solid rgb(166, 157, 145); */
-    color:rgb(39, 35, 30);
-    display:none;
     margin-top:-3%;
     margin-right:5%;
-    height:2.8rem;
+    height:1rem;
 }
 .link p{
+    color:rgb(162, 151, 82);
     line-height:0;
     font-size:14;
 }
@@ -89,6 +89,7 @@ body{
     z-index: 1;
     flex:1;
     padding:1%; 
+    margin-bottom:20%
 }
 .modal-page{
     display:none;
@@ -322,31 +323,41 @@ button:active{
     }
     #modal-flex{
         padding:1%;
-        margin-right:15%;
         justify-content: center;
         flex:1;
         margin-top:10%
     }
     #header{
-        flex-flow:column;
-        width:3rem;
-        border-left: 2px solid rgb(176, 173, 114);
+        flex-flow:row;
+        border-top: 2px solid rgb(176, 173, 114);
         border-bottom:none;
-        align-self: flex-start;
-        max-height: 100%;
-        width:3rem;
+        justify-content: space-between;
+        height:2rem;
+        width:100%;
+        padding-bottom: 7%;
+        margin: auto;
         position: fixed;
-        margin-left: 85%;
-        margin-top:30%;
+        bottom:0;
         z-index: 2;
     }
-    #links-container{
-        order:1;
+    #hburg-flex{
+        margin-right:50%;
+    }
+    #links-menu{
+        position:absolute;
+        bottom:0;
+        right:1%;
+        margin-bottom: 10%;
+    }
+    .link{
+        margin-right:10%;
+        height:2rem;
     }
     #header li{
         line-height: 200%;
-        border-bottom: 1px solid rgb(140, 138, 93);
-        margin-bottom: 2rem;
+        border-right: 1px solid rgba(129, 124, 111, 0.461);
+        padding-right:7%;
+        margin: auto;
         font-size: 14px;
     }
     #main-flex{
