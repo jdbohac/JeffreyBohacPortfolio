@@ -1,0 +1,40 @@
+#stage-flex{
+    display:flex;
+    flex-flow: column;
+    flex:2;
+}
+#inv-button:hover{
+    cursor: pointer;
+}
+#left-move-button:hover{
+    cursor: pointer;
+}
+#for-move-button:hover{
+    cursor: pointer;
+}
+#right-move-button:hover{
+    cursor: pointer;
+}
+#menu-flex{
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+    
+}
+#inv-container{
+    display:flex;
+    flex-flow:column;
+    justify-content: absolute;
+}
+#inv-list{
+    display:flex;
+    flex-flow: column;
+    position:absolute;
+    bottom:0;
+}
+.inv-item:hover{
+    cursor: pointer;
+}
+#win{
+    display: none;
+}

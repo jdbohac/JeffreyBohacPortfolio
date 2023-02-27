@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="stage-flex">
+      <div class="stage" id="gate">
+        <div class="gate-text">
+          <div id="gate-stage">
+            <img src="gate-stage.jpeg" id="gate-bkgd" class="bkgd">
+          </div>
+          <p>You stand before a stone castle that seems to be mostly rubble except for a lone room, sealed off by a large iron gate. The smell of pork chops and venison waft to you from inside. There is a path to your left that leads to a thicket and to your right a cave that stenches of Barbasol.</p>
+        </div>
+      </div>
+
+      <div class="stage" id="cave">
+
+      </div>
+      <div class="stage" id="win">
+        <p>You won!</p>
+      </div>
+
+    </div>
+    <div id="menu-flex">
+      <p id="inv-button">Inventory</p>
+      <div id="inv-container">
+        <div id="inv-list"></div>
+      </div>
+      <div id="left-move-button" class="move-button">moveleft</div>
+      <div id="for-move-button" class="move-button">moveforward</div>
+      <div id="right-move-button" class="move-button">moveright</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
