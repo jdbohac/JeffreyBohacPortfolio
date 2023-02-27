@@ -64,7 +64,7 @@ body{
     z-index: 2;
     position:absolute;
     top:0;
-    margin-top:20%;
+    margin-top:18%;
 }
 .link{
     margin-top:-3%;
@@ -345,7 +345,7 @@ button:active{
         position:absolute;
         bottom:0;
         right:1%;
-        margin-top:-37%;
+        margin-top:-35%;
     }
     .link{
         margin-right:10%;
