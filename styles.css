@@ -232,7 +232,7 @@ button:active{
     color:rgba(58, 55, 60, 0.44);
     object-fit: contain;
     background-color: rgba(178, 174, 182, 0.244);
-    padding: 1% 1%;
+    padding: 3%;
     margin:auto;
 }
 .carousel-img:first-of-type{
