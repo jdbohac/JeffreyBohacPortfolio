@@ -115,10 +115,6 @@ a{
     text-decoration: none;
     color:rgb(105, 93, 78);
 }
-.fa{
-    padding:5%;
-    color:rgb(175, 151, 43);
-}
 #home{
     display:flex;
     flex-flow:column;
@@ -132,14 +128,31 @@ a{
 }
 #about li{
     list-style: none;
-    color: rgb(166, 157, 145);
-    text-decoration: underline;
-    text-align:center;
-    line-height:3rem;
-    font-size:24;
+    color: rgba(177, 173, 90, 0.716);
+    font-size:22px;
 }
-#about li:hover{
+.about-section:hover{
     cursor: pointer;
+    display: block;
+}
+#about-box{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.about-section{
+    display:flex;
+    background-color: rgba(171, 159, 182, 0.18);
+    justify-content: center;
+    border-radius: 20%;
+    line-height: 4;
+    width:7rem;
+    height:5rem;
+    margin:3%;
+    padding:2%;
+}
+.about-section:active{
+    background-color: rgba(171, 159, 182, 0.593);
 }
 .back{
     color:rgb(166, 157, 145);
@@ -327,6 +340,9 @@ button:active{
         margin-top:20%;
         z-index: 2;
     }
+    #links-container{
+        order:1;
+    }
     #header li{
         line-height: 200%;
         border-bottom: 1px solid rgb(140, 138, 93);
@@ -340,7 +356,7 @@ button:active{
         font-size: 15px;
     }
     #about li{
-        font-size:25px;
+        font-size:20px;
     }
     button{
         margin:5%;
