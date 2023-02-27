@@ -332,9 +332,9 @@ button:active{
         border-top: 2px solid rgb(176, 173, 114);
         border-bottom:none;
         justify-content: space-between;
-        height:2rem;
+        height:3rem;
         width:100%;
-        padding-bottom: 7%;
+        padding-bottom: 4%;
         margin: auto;
         position: fixed;
         bottom:0;
@@ -355,7 +355,7 @@ button:active{
     }
     #header li{
         line-height: 200%;
-        border-right: 1px solid rgba(129, 124, 111, 0.461);
+        border-right: 1px solid rgba(192, 161, 82, 0.461);
         padding-right:7%;
         margin: auto;
         font-size: 14px;
