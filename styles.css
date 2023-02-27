@@ -61,12 +61,11 @@ body{
 }
 #links-menu{
     display:none;
-    z-index: 1;
+    z-index: 2;
     position:relative;
     margin:0;
 }
 .link{
-    z-index:2;
     margin-top:-3%;
     margin-right:5%;
     height:1rem;
@@ -267,7 +266,6 @@ button:active{
     border-radius: 4%;
     background-color: rgba(178, 174, 182, 0.244);
     padding: 3% 3%;
-    margin-right: 2rem;
 }
 .project-display:first-of-type{
     display:block;
@@ -325,7 +323,7 @@ button:active{
         padding:1%;
         justify-content: center;
         flex:1;
-        margin-top:10%
+        margin-top:15%
     }
     #header{
         flex-flow:row;
@@ -347,11 +345,11 @@ button:active{
         position:absolute;
         bottom:0;
         right:1%;
-        margin-bottom: 10%;
+        margin-bottom: 15%;
     }
     .link{
         margin-right:10%;
-        height:2rem;
+        height:1.4rem;
     }
     #header li{
         line-height: 200%;
