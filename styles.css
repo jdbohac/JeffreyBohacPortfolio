@@ -133,7 +133,6 @@ a{
 }
 .about-section:hover{
     cursor: pointer;
-    display: block;
 }
 #about-box{
     display:flex;
@@ -148,7 +147,7 @@ a{
     line-height: 4;
     width:7rem;
     height:5rem;
-    margin:3%;
+    margin:7% 5%;
     padding:2%;
 }
 .about-section:active{
