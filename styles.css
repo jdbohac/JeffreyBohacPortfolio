@@ -324,8 +324,8 @@ button:active{
         padding:1%;
         margin-right:15%;
         justify-content: center;
-        margin-top: 15%;
-        flex:1
+        flex:1;
+        margin-top:10%
     }
     #header{
         flex-flow:column;
@@ -337,7 +337,7 @@ button:active{
         width:3rem;
         position: fixed;
         margin-left: 85%;
-        margin-top:20%;
+        margin-top:30%;
         z-index: 2;
     }
     #links-container{
