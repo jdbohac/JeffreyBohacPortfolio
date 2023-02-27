@@ -299,7 +299,7 @@ button:active{
 
 
 
-@media(max-width: 600px){
+@media(max-width: 550px){
     h1{
         font-size: 37px;
     }
@@ -311,6 +311,7 @@ button:active{
         padding:1%;
         margin-right:15%;
         justify-content: center;
+        margin-top: 15%;
         flex:1
     }
     #header{
@@ -319,7 +320,7 @@ button:active{
         border-left: 2px solid rgb(176, 173, 114);
         border-bottom:none;
         align-self: flex-start;
-        max-height:none;
+        max-height: 100%;
         width:3rem;
         position: fixed;
         margin-left: 85%;
@@ -334,7 +335,6 @@ button:active{
     }
     #main-flex{
         flex-flow:row-reverse wrap;
-        margin-top: 35%;
     }    
     .link p{
         font-size: 15px;
