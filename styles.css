@@ -62,8 +62,9 @@ body{
 #links-menu{
     display:none;
     z-index: 2;
-    position:relative;
-    margin:0;
+    position:absolute;
+    top:0;
+    margin-top:20%;
 }
 .link{
     margin-top:-3%;
@@ -185,6 +186,7 @@ a{
     flex-flow: column wrap;
     align-items: center;
     font-size: 20px;
+    padding:10%;
     line-height: 2rem;
     flex:1;
 }
@@ -225,27 +227,26 @@ button:active{
 }
 .big-button{
     width:4rem;
-    height:2.5rem;
+    height:3rem;
     margin-top:-15%;
 
 }
 #works-body{
     display:flex;
     justify-content: center;
+    margin: auto;
 }
 
 .carousel-img{
     display:none;
-    width:25rem;
+    width:20rem;
     height:20rem;
-    flex:1;
     box-shadow: 2px 2px 1rem;
     border-radius: 4%;
     color:rgba(58, 55, 60, 0.44);
     object-fit: contain;
     background-color: rgba(178, 174, 182, 0.244);
     padding: 3%;
-    margin:auto;
 }
 .carousel-img:first-of-type{
     display:block
@@ -344,7 +345,7 @@ button:active{
         position:absolute;
         bottom:0;
         right:1%;
-        margin-bottom: 15%;
+        margin-top:-33%;
     }
     .link{
         margin-right:10%;
