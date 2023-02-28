@@ -59,7 +59,7 @@ const dropItems = [
 //items obtained by exploration
 const stageItems =[
     {
-        name:'Dennis\'s teeth',
+        name:'dennis-teeth',
     },
     {
         name:'Rat Droppings',
@@ -75,7 +75,7 @@ const popInv = () => {
     $('#inventory-list').remove()
     const $list = $('<ul>').attr('id', 'inventory-list')
     for (let i=0; i<inventory.length; i++){
-    const $items = $('<li>').attr('id', inventory[i].name).addClass('inv-item')
+    const $items = $('<li>').attr('id', inventory[i].name + '-button').addClass('inv-item')
     $items.append(inventory[i].name)
     $items.appendTo($list)
     
@@ -197,10 +197,11 @@ const attackRound = () =>{
 const dropItem = () => {
     if(Math.random() <0.5){
         inventory.push(dropItems[0])
+        $('#battle-drop').fadeIn()
     } else{
         inventory.push(dropItems[1])
+        $('#battle-drop').fadeIn()
     }
-    $('#battle-drop').show()
 }
 const showStage = () => {
     $('.popup').hide()
@@ -266,7 +267,7 @@ const stageCave =  () => {
 let hasMetDennis = false
 const dennis = () => {
     for (let i =0; i <inventory.length; i++){
-        if(inventory[i].name = 'Dennis\'s teeth'){
+        if(inventory[i].name = 'dennis-teeth'){
             hasTeeth = true
         }
     }
@@ -276,6 +277,8 @@ const dennis = () => {
     } else if (hasMetDennis && hasTeeth){
         $('#dennis-teeth').show()
         $('#dennis').hide()
+        $('#dennis-teeth-button').remove()
+        inventory.push(stageItems[1])
     }else{
         $('#dennis-remind').show()
     }
@@ -318,6 +321,5 @@ $('#attack').on('click', attackRound)
 $('.back').on('click', showStage)
 $('#dennis').on('click', dennis)
 $('#shish-kebab-img').click({item: 'shish-kebab'}, takeWeapon)
-inventory.push(stageItems[0])
 })
 

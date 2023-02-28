@@ -122,6 +122,13 @@ a{
     padding:5%;
     margin: auto;
 }
+#headshot{
+    width:9rem;
+    position:absolute;
+    top:35rem;
+    left:0rem;
+    opacity: .5;
+}
 #about{
     flex-flow:column;
     margin: auto;
