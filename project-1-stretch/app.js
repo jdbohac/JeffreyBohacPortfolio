@@ -214,6 +214,7 @@ const updateStats = () => {
 const showBattle = (enemy) => {
 
 }
+let stageName = 'gate';
 // const stageGate = () => {
 //     let keyToggle = 0;
     
@@ -232,7 +233,7 @@ $('#inv-button').on('click', showInventory)
 $('#for-move-button').on('click', () => {
 
  for (let i = 0; i < inventory.length; i++) {
-    if(inventory[i].name == 'Large Key'){
+    if(stageName == 'gate' && inventory[i].name == 'Large Key'){
             $('#win').slideDown()
             }
         }

@@ -28,7 +28,7 @@
 }
 #inv-list{
     display:flex;
-    flex-flow: column;
+    flex-flow: row;
     position:absolute;
     bottom:0;
 }
@@ -37,4 +37,8 @@
 }
 #win{
     display: none;
+}
+.popup{
+    display: none;
+
 }

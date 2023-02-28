@@ -150,6 +150,8 @@ $('#hburg-flex').on('click', dropDown)
 $('.modal-page').on('click', hideLinks)
 //color scheme page displays
 $('#colors-button').click({id: '#colors'}, showModal)
+//display contact page
+$('#contact-button').click({id: '#contact'}, showModal)
 //changes color scheme when buttons are clicked
 $('#blue').on('click', makeBlue)
 $('#pink').on('click', makePink)
