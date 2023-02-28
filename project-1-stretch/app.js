@@ -7,24 +7,25 @@ let currentEnemyHp = 0;
 let hasKey = false;
 //curent stage id
 let stageName = '#gate-stage'
+let hasTeeth = false;
 let currentPlayerAttack = 0;
 let currentEnemyAttack = 0;
 //array of weapons that can be obtained
 const weapons = [{
     name: 'Slim Jim',
-    atk: Math.floor(Math.random() * 4) + 1,
+    atk: 2,
     crit: 4,
     accuracy: 0.8 
     },
     {
     name: 'Shish Kebab',
-    atk: Math.floor(Math.random() * 3) + 4,
+    atk: 5,
     crit:6,
     accuracy: 0.9 
     },
     {
     name: 'Leg of Lamb',
-    atk: Math.floor(Math.random() * 7) + 4,
+    atk:  7,
     crit:9,
     accuracy: 0.8 
     }
@@ -144,29 +145,20 @@ const enemies = [
 const specialMoves = [
     {
         name:'Spit Roast',
-        atk: () => {
-            let atk = Math.floor(Math.random() * 10) + 5
-            return atk
-        },
+        atk: 10,
         stamina:10,
         intro:'You used Spit Roast, a jet of flames launches from your jowls.',
     },
     {
         name:'Broil',
-        atk: () => {
-            let atk = Math.floor(Math.random() * 10) + 7
-            return atk
-        },
+        atk: 7,
         stamina:15,
         intro:`You wrap ${enemies[currentEnemy].name} in a warm embrace. Too warm, in fact \
         it combusts spontaneously from the heat`,
     },
     {
         name:'Tenderize',
-        atk: () => {
-            let atk = Math.floor(Math.random() * 12) + 9
-            return atk
-        },
+        atk: 9,
         stamina:20,
         intro:`You absolutely pulverize the ${enemies[currentEnemy].name}. The poor soul, \
         you should be ashamed of yourself.`
@@ -182,17 +174,14 @@ const handleHunger = (hunger) => {
 const battleChance = (range) => {
     if(Math.random() < .4){
         startBattle(range)
-    } else {
-        showStage()
     }
     
     
 }
 const attackRound = () =>{
-    currentEnemyAttack = enemies[currentEnemy].atk
-    currentPlayerAttack = weapons[eqWeapon].atk
+    currentEnemyAttack = enemies[currentEnemy].atk 
     handleHunger(currentEnemyAttack)
-    currentEnemyHp -= currentPlayerAttack
+    currentEnemyHp -= Math.floor(Math.random() *3) + weapons[eqWeapon].atk
     updateStats()
     if(player.hunger >= 100){
         $('.stage').hide()
@@ -200,10 +189,14 @@ const attackRound = () =>{
 
     }
     if(currentEnemyHp <= 0){
+        player.hunger += enemies[currentEnemy].hunger
+        player.xp += enemies[currentEnemy].xp
+
         showStage()
     }
 }
 const showStage = () => {
+    $('.popup').hide()
     $('.stage').hide()
 $(`${stageName}`).fadeIn()
 }
@@ -257,9 +250,28 @@ const stageCave =  () => {
 
     battleChance(2)
     }
+let hasMetDennis = false
+const dennis = () => {
+    if(hasMetDennis == false){
+    $('#dennis-meet').show()
+    hasMetDennis = true;
+    } else if (hasMetDennis && hasTeeth){
+        $('#dennis-remind').show()
+    }
+}
 
+const impasse = () => {
+    $('#nope').fadeIn()
+}
 
-
+    if(currentEnemyHp <= 0){
+        enemies.slice(currentEnemy, 1)
+        showStage()
+    }
+    if(player.hunger >= 100){
+        $('.stage').hide()
+        $('#lose-stage').fadeIn()
+    }
 
 
 
@@ -277,15 +289,11 @@ $('#for-move-gate').on('click', () => {
         }
     })
 $('#right-move-gate').on('click', stageCave)
-$('#left-move-cave').on('click', stageGate)    
+$('#left-move-cave').on('click', stageGate)
+$('#for-move-cave').on('click', impasse)    
 $('#attack').on('click', attackRound)
-    if(currentEnemyHp <= 0){
-        enemies.slice(currentEnemy, 1)
-        showStage()
-    }
-    if(player.hunger >= 100){
-        $('.stage').hide()
-        $('#lose-stage').fadeIn()
-    }
-    })
+$('.back').on('click', showStage)
+$('#dennis').on('click', dennis)
+
+})
 

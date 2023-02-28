@@ -41,6 +41,8 @@
 }
 .popup{
     display: none;
+    z-index:2;
+    background-color: white;
 
 }
 .special{
@@ -61,4 +63,12 @@ img{
     padding: 1%;
     width:10rem;
     height:10rem
+}
+#dennis{
+    position:absolute;
+    bottom:10rem;
+    left:5rem;
+}
+#dennis:hover{
+    cursor: pointer;
 }
