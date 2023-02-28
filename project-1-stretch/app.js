@@ -1,33 +1,28 @@
 //currently equiped weapon tracker
-let eqWeapon = 0
+let eqWeapon = 0;
 //current attacking enemy tracker
-let currentEnemy = 0
-//tracks current stage
-let currentStage = 0
+let currentEnemy = 0;
+let currentEnemyHp = 0;
 //trigger for win state
-let hasKey = false
+let hasKey = false;
+//curent stage id
+let stageName = '#gate-stage'
 //array of weapons that can be obtained
 const weapons = [{
     name: 'Slim Jim',
-    atk: () => {
-        Math.floor(Math.random() * 4) + 1
-    },
+    atk: Math.floor(Math.random() * 4) + 1,
     crit: 4,
     accuracy: 0.8 
     },
     {
     name: 'Shish Kebab',
-    atk: () => {
-        Math.floor(Math.random() * 3) + 4
-    },
+    atk: Math.floor(Math.random() * 3) + 4,
     crit:6,
     accuracy: 0.9 
     },
     {
     name: 'Leg of Lamb',
-    atk: () => {
-        Math.floor(Math.random() * 7) + 4
-    },
+    atk: Math.floor(Math.random() * 7) + 4,
     crit:9,
     accuracy: 0.8 
     }
@@ -106,9 +101,7 @@ const enemies = [
         name:'Flanking Steak',
         intro:'You\'ve been flanked by a Steak Monster!',
         outro:'You quickly gobble up its writhing body, 15 hunger is restored.',
-        atk: () => {
-            Math.floor(Math.random() * 3) + 2
-        },
+        atk: Math.floor(Math.random() * 3) + 2,
         hp:18,
         accuracy:0.7,
         hunger:-15,
@@ -119,9 +112,7 @@ const enemies = [
         name: 'Filet Mignome',
         intro: 'A deadly Mignome scurries up to you!',
         outro:'You struggle to swallow its remains in one gulp but you do and it restores 20 hunger.',
-        atk: () => {
-            Math.floor(Math.random() * 3) + 3
-        },
+        atk: Math.floor(Math.random() * 3) + 3,
         hp:15,
         accuracy:0.9,
         hunger:-20,
@@ -131,9 +122,7 @@ const enemies = [
         name:'Spare Ribs',
         intro:'You are confronted by an animate skeleton with a massive ribcage.',
         outro:'Not a lot of meat on those bones, it restores 10 hunger',
-        atk: () => {
-            Math.floor(Math.random() * 5) + 3
-        },
+        atk: Math.floor(Math.random() * 5) + 3,
         hp:20,
         accuracy:0.8,
         hunger:-10,
@@ -143,9 +132,7 @@ const enemies = [
         name:'Colonel Chicken',
         intro:'You are approached by a chiken in a white suit, it has a mean look in its eyes',
         outro:'Finger-licking good! it restored 20 hunger',
-        atk: () => {
-            Math.floor(Math.random() * 6) + 4
-        },
+        atk: Math.floor(Math.random() * 6) + 4,
         accuracy:0.7,
         hunger:-25,
         hp:25,
@@ -156,7 +143,8 @@ const specialMoves = [
     {
         name:'Spit Roast',
         atk: () => {
-            Math.floor(Math.random() * 10) + 5
+            let atk = Math.floor(Math.random() * 10) + 5
+            return atk
         },
         stamina:10,
         intro:'You used Spit Roast, a jet of flames launches from your jowls.',
@@ -164,16 +152,18 @@ const specialMoves = [
     {
         name:'Broil',
         atk: () => {
-            Math.floor(Math.random() * 10) + 7
+            let atk = Math.floor(Math.random() * 10) + 7
+            return atk
         },
         stamina:15,
-        intro:`You wrap ${enemies[currentEnemy]}.name in a warm embrace. Too warm, in fact \
+        intro:`You wrap ${enemies[currentEnemy].name} in a warm embrace. Too warm, in fact \
         it combusts spontaneously from the heat`,
     },
     {
         name:'Tenderize',
         atk: () => {
-            Math.floor(Math.random() * 12) + 9
+            let atk = Math.floor(Math.random() * 12) + 9
+            return atk
         },
         stamina:20,
         intro:`You absolutely pulverize the ${enemies[currentEnemy].name}. The poor soul, \
@@ -185,44 +175,86 @@ const handleHunger = (hunger) => {
     if (player.hunger < 0){
         player.hunger = 0
     }
-    return player.hunger
 }
 //determines if a battle will happen on move
-const battlechance = (range, stage) => {
-    if (Math.random() < 0.4){
+const battleChance = (range) => {
+    if(Math.random() < .4){
         startBattle(range)
     } else {
-        showStage(stage)
+        showStage()
+    }
+    
+    
+}
+const attackRound = () =>{
+    handleHunger(enemies[currentEnemy].atk)
+    currentEnemyHp -= weapons[eqWeapon].atk
+    updateStats()
+    if(player.hunger >= 100){
+        $('.stage').hide()
+        $('#lose-stage').fadeIn()
+
+    }
+    if(currentEnemyHp <= 0){
+        showStage()
     }
 }
-const battleRound = () =>{
-    player.hunger -= enemies[currentEnemy].atk;
-
+const showStage = () => {
+    $('.stage').hide()
+$(`${stageName}`).fadeIn()
 }
 //range determines which enemy types can be present in current stage
 const startBattle = (range) => {
-    let currentEnemy = Math.floor(Math.random() * range)
-    showBattle(currentEnemy)
+    currentEnemy = Math.floor(Math.random() * range);
+    currentEnemyHp = enemies[currentEnemy].hp
+    showBattle()
 }
 const addInventory = (item) => {
     inventory.push(item)
 }
 //display reflect stat changes after battle
 const updateStats = () => {
-    
+    $('.stats').remove()
+    let $enemyHp = $('<p>').addClass('stats')
+    $enemyHp.text(`${enemies[currentEnemy].name} has: ${currentEnemyHp}hp left`)
+    let $playerStats = $('<p>').addClass('stats')
+    $playerStats.text(`Your current hunger is ${player.hunger}`)
+    $('#player-stats').append($playerStats)
+    $('#enemy-stats').append($enemyHp)
 }
-const showBattle = (enemy) => {
+const showBattle = () => {
+    $('.stage').hide()
+    $('#battle-stage').fadeIn()
+    updateStats()
+
 
 }
-let stageName = 'gate';
-// const stageGate = () => {
-//     let keyToggle = 0;
-    
-//         } else {
+const stageGate =  () => {
+    stageName = '#gate-stage'
+    if(player.hunger >= 100){
+        // showLose()
+    }else {
+        handleHunger(3)
+        $('.move-button').hide()
+        $('.gate').fadeIn()
+        $('.stage').hide()
+        $('#gate-stage').fadeIn()
+    }
 
-//         }
+}    
         
-    
+const stageCave =  () => {
+    stageName = '#cave-stage'
+        handleHunger(3)
+        $('.move-button').hide()
+        $('.cave').fadeIn()
+        $('.stage').hide()
+        $('#cave-stage').fadeIn()
+
+    battleChance(2)
+    }
+
+
 
 
 
@@ -230,13 +262,26 @@ let stageName = 'gate';
 
 $(() => {
 $('#inv-button').on('click', showInventory)
-$('#for-move-button').on('click', () => {
+$('#for-move-gate').on('click', () => {
+    for (let i = 0; i < inventory.length; i++) {
+        if(inventory[i].name == 'Large Key'){
 
- for (let i = 0; i < inventory.length; i++) {
-    if(stageName == 'gate' && inventory[i].name == 'Large Key'){
+            $('.stage').hide()
+            $('#menu-flex').hide()
             $('#win').slideDown()
             }
         }
     })
+$('#right-move-gate').on('click', stageCave)
+$('#left-move-cave').on('click', stageGate)    
+$('#attack').on('click', attackRound)
+    if(currentEnemyHp <= 0){
+        enemies.slice(currentEnemy, 1)
+        showStage()
+    }
+    if(player.hunger >= 100){
+        $('.stage').hide()
+        $('#lose-stage').fadeIn()
+    }
     })
 

@@ -13,20 +13,42 @@
 </head>
 <body>
     <div id="stage-flex">
-      <div class="stage" id="gate">
+      <div class="stage" id="gate-stage">
         <div class="gate-text">
+          <p>You stand before a stone castle that seems to be mostly rubble except for a lone room, sealed off by a large iron gate. The smell of pork chops and venison waft to you from inside. There is a path to your left that leads to a thicket and to your right a cave that stenches of Barbasol.</p>
           <div id="gate-stage">
             <img src="gate-stage.jpeg" id="gate-bkgd" class="bkgd">
           </div>
-          <p>You stand before a stone castle that seems to be mostly rubble except for a lone room, sealed off by a large iron gate. The smell of pork chops and venison waft to you from inside. There is a path to your left that leads to a thicket and to your right a cave that stenches of Barbasol.</p>
+          
         </div>
       </div>
 
-      <div class="stage" id="cave">
-
+      <div class="stage" id="cave-stage">
+        <div id="cave-text">
+          <p>You step into the cave, trying to hold your breath but the smell of shaving cream still seeps into your olfactory glands.</p>
+        </div>
+        <div id="cave-bkgd" class="bkgd">
+          <img src="cave-stage.jpeg">
+        </div>
       </div>
+
+      <div class="stage" id="battle-stage">
+        <div id="battle-container">
+        <div id="enemy-stats"></div>
+        <div id="player-stats"></div>
+      </div>
+        <button id="attack">attack</button>
+        <button class="special" id="spit-roast">Spit-Roast</button>
+        <button class="special" id="broil">Broil</button>
+        <button class="special" id="tenderize">Tenderize</button>
+      </div>
+
+      <div class="stage" id="lose-stage">
+        <p>You died from hunger, refresh the page to try again!</p>
+      </div>
+      
       <div class="stage" id="win">
-        <p>You won!</p>
+        <p>You open the gate with the Large Key and step inside the castle remains. Inside is a magical fire pit filled to the brim with roast pork, chicken, goose, ibis and all other delectible meats you could ever want. As you eat the pit never seems to become less full, replenishing itself before you can even make a dent. You are the happiest you have ever been and plan to live here the rest of your days.<br>You WIN! congratulations!<br>IF you would like to play again, please refresh the page!</p>
       </div>
       <div id="nope" class="popup">
         <p>cannot go that way</p>
@@ -37,10 +59,14 @@
       <div id="inv-container">
         <div id="inv-list"></div>
       </div>
-      <div id="left-move-button" class="move-button">moveleft</div>
-      <div id="for-move-button" class="move-button">moveforward</div>
-      <div id="right-move-button" class="move-button">moveright</div>
+      <div id="left-move-gate" class="move-button gate">moveleft</div>
+      <div id="for-move-gate" class="move-button gate">moveforward</div>
+      <div id="right-move-gate" class="move-button gate">moveright</div>
+      <div id="left-move-cave" class="move-button cave">moveleft</div>
+    <div id="for-move-cave" class="move-button cave">moveforward</div>
+    <div id="right-move-cave" class="move-button cave">moveright</div>
     </div>
+
 
     <script src="app.js"></script>
 </body>

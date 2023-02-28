@@ -114,7 +114,7 @@ p{
 }
 a{
     text-decoration: none;
-    color:rgb(105, 93, 78);
+    color:rgb(183, 172, 92);
 }
 #home{
     display:flex;
@@ -144,10 +144,10 @@ a{
     background-color: rgba(171, 159, 182, 0.18);
     justify-content: center;
     border-radius: 20%;
-    line-height: 4;
-    width:7rem;
+    line-height: 3;
+    width:6rem;
     height:5rem;
-    margin:7% 5%;
+    margin:7% 3%;
     padding:2%;
 }
 .about-section:active{
@@ -175,6 +175,7 @@ a{
     display:flex;
     flex-flow: row wrap;
     align-items: center;
+    margin-right:3%;
 }
 #buttons{
     display:flex;

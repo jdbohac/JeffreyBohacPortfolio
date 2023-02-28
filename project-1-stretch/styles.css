@@ -6,29 +6,23 @@
 #inv-button:hover{
     cursor: pointer;
 }
-#left-move-button:hover{
-    cursor: pointer;
-}
-#for-move-button:hover{
-    cursor: pointer;
-}
-#right-move-button:hover{
+.move-button:hover{
     cursor: pointer;
 }
 #menu-flex{
+    position: absolute;
+    bottom:0;
     display:flex;
     width:100%;
     justify-content: space-around;
-    
 }
 #inv-container{
     display:flex;
-    flex-flow:column;
-    justify-content: absolute;
+    flex-flow:column;;
 }
 #inv-list{
     display:flex;
-    flex-flow: row;
+    flex-flow: column wrap;
     position:absolute;
     bottom:0;
 }
@@ -38,7 +32,33 @@
 #win{
     display: none;
 }
+#gate-stage{
+    display: flex;
+}
+.stage{
+    display: none;
+    justify-content: center;
+}
 .popup{
     display: none;
 
+}
+.special{
+    display:none;
+}
+.cave{
+    display:none;
+}
+img{
+    object-fit: contain;
+    height:20rem;
+    margin-bottom: 5%;
+
+    margin:auto;
+}
+#cave-bkgd{
+    object-fit: contain;
+    padding: 1%;
+    width:10rem;
+    height:10rem
 }
