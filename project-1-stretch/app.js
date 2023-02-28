@@ -7,6 +7,8 @@ let currentEnemyHp = 0;
 let hasKey = false;
 //curent stage id
 let stageName = '#gate-stage'
+let currentPlayerAttack = 0;
+let currentEnemyAttack = 0;
 //array of weapons that can be obtained
 const weapons = [{
     name: 'Slim Jim',
@@ -187,8 +189,10 @@ const battleChance = (range) => {
     
 }
 const attackRound = () =>{
-    handleHunger(enemies[currentEnemy].atk)
-    currentEnemyHp -= weapons[eqWeapon].atk
+    currentEnemyAttack = enemies[currentEnemy].atk
+    currentPlayerAttack = weapons[eqWeapon].atk
+    handleHunger(currentEnemyAttack)
+    currentEnemyHp -= currentPlayerAttack
     updateStats()
     if(player.hunger >= 100){
         $('.stage').hide()
@@ -205,8 +209,14 @@ $(`${stageName}`).fadeIn()
 }
 //range determines which enemy types can be present in current stage
 const startBattle = (range) => {
+    $('.enemy-attack').remove()
+    currentEnemyAttack = enemies[currentEnemy].atk
+    currentPlayerAttack = weapons[eqWeapon].atk
     currentEnemy = Math.floor(Math.random() * range);
     currentEnemyHp = enemies[currentEnemy].hp
+    let $enemyAttack = $('<p>').addClass('enemy-attack')
+    $enemyAttack.text(`${enemies[currentEnemy].intro}`)
+    $('#enemy-stats').append($enemyAttack)
     showBattle()
 }
 const addInventory = (item) => {
@@ -231,18 +241,12 @@ const showBattle = () => {
 }
 const stageGate =  () => {
     stageName = '#gate-stage'
-    if(player.hunger >= 100){
-        // showLose()
-    }else {
         handleHunger(3)
         $('.move-button').hide()
         $('.gate').fadeIn()
         $('.stage').hide()
         $('#gate-stage').fadeIn()
-    }
-
-}    
-        
+}        
 const stageCave =  () => {
     stageName = '#cave-stage'
         handleHunger(3)
