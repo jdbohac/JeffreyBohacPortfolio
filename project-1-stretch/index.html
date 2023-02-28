@@ -29,6 +29,7 @@
         <div id="cave-bkgd" class="bkgd">
           <img src="cave-stage.jpeg">
           <img src="Dennis.png" id="dennis">
+          <img src="shish-kebab.png" id="shish-kebab-img">
         </div>
         </div>
 
@@ -47,18 +48,34 @@
         <p>You died from hunger, refresh the page to try again!</p>
       </div>
       
+      <div class="popup" id="dennis-teeth">
+        <p>Dennis sniffs you as you come near, "My teeth! You have them! please hand them over, I will repay you greatly!"<br>You hand over the teeth and Dennis chortles with glee.<br>"OH thank you so very much, stranger! I haven't forgotten my promise!"<br>Dennis forces a mushy bunch into your hand, it is unfortunately excrement. Dennis suddenly tramples off as fast as his meager frame can manage. You shrug and put the dung away for later use.</p>
+        <button class="back">back</button>
+      </div>
+
+      <div class="popup" id="dennis-meet">
+        <p>You meet a lowly peasant man named Dennis. He tells you he's lost his teeth and that he would be very grateful if you could find them for him. He says he has something with which he can repay you.</p>
+        <button class="back">back</button>
+      </div>
+
       <div class="popup" id="dennis-remind">
         <p>Did you find my missing teeth yet?</p>
         <button class="back">back</button>
       </div>
 
-      <div class="popup" id="dennis-meet">
-        <p>You meet a lowly peasant man named Dennis. He tells you he's loast his teeth and that he would be very grateful if you could find them for him. He says he has something with which he can repay you.</p>
+      <div class="popup" id="battle-drop">
+        <p>The enemy dropped something for you! Check your inventory!</p>
         <button class="back">back</button>
       </div>
+
       <div class="stage" id="win">
         <p>You open the gate with the Large Key and step inside the castle remains. Inside is a magical fire pit filled to the brim with roast pork, chicken, goose, ibis and all other delectible meats you could ever want. As you eat the pit never seems to become less full, replenishing itself before you can even make a dent. You are the happiest you have ever been and plan to live here the rest of your days.<br>You WIN! congratulations!<br>IF you would like to play again, please refresh the page!</p>
       </div>
+
+      <div id="inv-container" class="popup">
+        <div id="inv-list"></div>
+      </div>
+
       <div id="nope" class="popup">
         <p>cannot go that way</p>
         <button class="back">back</button>
@@ -66,9 +83,7 @@
     </div>
     <div id="menu-flex">
       <p id="inv-button">Inventory</p>
-      <div id="inv-container">
-        <div id="inv-list"></div>
-      </div>
+      
       <div id="left-move-gate" class="move-button gate">moveleft</div>
       <div id="for-move-gate" class="move-button gate">moveforward</div>
       <div id="right-move-gate" class="move-button gate">moveright</div>

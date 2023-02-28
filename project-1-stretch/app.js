@@ -18,7 +18,7 @@ const weapons = [{
     accuracy: 0.8 
     },
     {
-    name: 'Shish Kebab',
+    name: 'shish-kebab',
     atk: 5,
     crit:6,
     accuracy: 0.9 
@@ -48,6 +48,7 @@ const dropItems = [
         name:'bottled water',
         stamina: 15,
         hunger: 5,
+
     },
     {
         name:'Yakitori',
@@ -59,12 +60,9 @@ const dropItems = [
 const stageItems =[
     {
         name:'Dennis\'s teeth',
-        intro:'You\'ve found Dennis\'s missing teeth!\
-        They don\'t smell very nice...'
     },
     {
         name:'Rat Droppings',
-        intro:'Dennis forces a mushy bunch into your hand. It is indeed feces. Let\'s say they\'re from a rat. You regretfully thank Dennis and he sprints out of the cave faster than you have ever seen a man run before.'
     },
     {
         name:'Large Key',
@@ -72,10 +70,7 @@ const stageItems =[
     }
 ]
 //currently help items
-const inventory = [{
-    name:'Large Key',
-    intro:'The Mighty Ribeye wretches at the smell of the poopoo you\'ve pulled from your left sock. He begins to spew a sticky green ichor and continues for several second. Among the chunks is a large key, possibly for a door that\'s locked somewhere!'
-}]
+const inventory = []
 const popInv = () => {
     $('#inventory-list').remove()
     const $list = $('<ul>').attr('id', 'inventory-list')
@@ -83,6 +78,7 @@ const popInv = () => {
     const $items = $('<li>').attr('id', inventory[i].name).addClass('inv-item')
     $items.append(inventory[i].name)
     $items.appendTo($list)
+    
 }
     $list.appendTo('#inv-list')
 }
@@ -191,9 +187,20 @@ const attackRound = () =>{
     if(currentEnemyHp <= 0){
         player.hunger += enemies[currentEnemy].hunger
         player.xp += enemies[currentEnemy].xp
+        if(Math.random() < 0.9){
+            dropItem()
+        }
 
         showStage()
     }
+}
+const dropItem = () => {
+    if(Math.random() <0.5){
+        inventory.push(dropItems[0])
+    } else{
+        inventory.push(dropItems[1])
+    }
+    $('#battle-drop').show()
 }
 const showStage = () => {
     $('.popup').hide()
@@ -205,15 +212,21 @@ const startBattle = (range) => {
     $('.enemy-attack').remove()
     currentEnemyAttack = enemies[currentEnemy].atk
     currentPlayerAttack = weapons[eqWeapon].atk
-    currentEnemy = Math.floor(Math.random() * range);
+    currentEnemy = range;
     currentEnemyHp = enemies[currentEnemy].hp
     let $enemyAttack = $('<p>').addClass('enemy-attack')
     $enemyAttack.text(`${enemies[currentEnemy].intro}`)
     $('#enemy-stats').append($enemyAttack)
     showBattle()
 }
-const addInventory = (item) => {
-    inventory.push(item)
+const takeWeapon = (weaponName) => {
+    for (let i = 0; i < weapons.length; i++) {
+        if(weapons[i].name == weaponName.data.item){
+            inventory.push(weapons[i])
+
+        }
+    }
+    $(`#${weaponName.data.item}-img`).hide()
 }
 //display reflect stat changes after battle
 const updateStats = () => {
@@ -248,14 +261,22 @@ const stageCave =  () => {
         $('.stage').hide()
         $('#cave-stage').fadeIn()
 
-    battleChance(2)
+    battleChance(Math.floor(Math.random() *2))
     }
 let hasMetDennis = false
 const dennis = () => {
+    for (let i =0; i <inventory.length; i++){
+        if(inventory[i].name = 'Dennis\'s teeth'){
+            hasTeeth = true
+        }
+    }
     if(hasMetDennis == false){
     $('#dennis-meet').show()
     hasMetDennis = true;
     } else if (hasMetDennis && hasTeeth){
+        $('#dennis-teeth').show()
+        $('#dennis').hide()
+    }else{
         $('#dennis-remind').show()
     }
 }
@@ -285,6 +306,8 @@ $('#for-move-gate').on('click', () => {
             $('.stage').hide()
             $('#menu-flex').hide()
             $('#win').slideDown()
+            } else {
+                impasse()
             }
         }
     })
@@ -294,6 +317,7 @@ $('#for-move-cave').on('click', impasse)
 $('#attack').on('click', attackRound)
 $('.back').on('click', showStage)
 $('#dennis').on('click', dennis)
-
+$('#shish-kebab-img').click({item: 'shish-kebab'}, takeWeapon)
+inventory.push(stageItems[0])
 })
 
