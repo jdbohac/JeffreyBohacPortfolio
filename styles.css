@@ -120,14 +120,16 @@ a{
     display:flex;
     flex-flow:column;
     padding:5%;
-    margin: auto;
+    margin:auto;
 }
 #headshot{
     width:9rem;
-    position:absolute;
-    top:35rem;
-    left:0rem;
-    opacity: .5;
+    background-color: rgb(180, 157, 68);
+    border:1rem solid rgba(162, 147, 72, 0.87);
+    border-radius: 90%;
+    opacity: .79;
+    box-shadow: 2px 2px .5rem;
+    color:rgba(81, 82, 65, 0.825);
 }
 #about{
     flex-flow:column;
