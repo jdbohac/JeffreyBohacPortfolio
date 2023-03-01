@@ -124,6 +124,12 @@ const makeWhite = () => {
     $('h1').css('color', 'rgb(42, 41, 50)')
     $('#header li').css('color', 'rgb(42, 41, 50)')
 }
+const makeOrange = () => {
+    $('body').css('background-color', 'rgb(245, 192, 149)')
+    $('#header').css('background-color', 'rgb(245, 192, 149)')
+    $('h1').css('color', 'rgba(168, 243, 212, 0.964)')
+    $('#header li').css('color', 'rgba(199, 240, 195, 0.964)')
+}
 
 //enough functions it's time for events!
 $(() => {
@@ -158,6 +164,7 @@ $('#pink').on('click', makePink)
 $('#teal').on('click', makeTeal)
 $('#grey').on('click', makeGrey)
 $('#white').on('click', makeWhite)
+$('#orange').on('click', makeOrange)
 //project preview cycle every 6 seconds
 setInterval(nextProj, 6000)
 })

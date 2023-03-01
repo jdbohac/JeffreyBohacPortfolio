@@ -86,9 +86,11 @@ body{
     display: flex;
     flex-flow:row wrap;
     align-items: center;
+    justify-content: center;
     z-index: 1;
     padding:1%; 
-    margin-bottom:20%
+    margin-bottom:20%;
+    margin-top:5%;
 }
 .modal-page{
     display:none;
@@ -127,7 +129,7 @@ a{
     background-color: rgb(180, 157, 68);
     border:1rem solid rgba(162, 147, 72, 0.87);
     border-radius: 90%;
-    opacity: .79;
+    opacity: .87;
     box-shadow: 2px 2px .5rem;
     color:rgba(81, 82, 65, 0.825);
 }
@@ -138,7 +140,7 @@ a{
 #about li{
     list-style: none;
     color: rgba(177, 173, 90, 0.716);
-    font-size:22px;
+    font-size:4rem;
 }
 .about-section:hover{
     cursor: pointer;
@@ -153,11 +155,14 @@ a{
     background-color: rgba(171, 159, 182, 0.18);
     justify-content: center;
     border-radius: 20%;
+    box-shadow:2px 2px .7rem;
+    color:rgba(58, 55, 60, 0.44);
     line-height: 3;
     width:6rem;
     height:5rem;
     margin:7% 3%;
     padding:2%;
+    border:1px solid rgb(166, 157, 78);
 }
 .about-section:active{
     background-color: rgba(171, 159, 182, 0.593);
@@ -170,6 +175,7 @@ a{
 }
 #works{
     flex-flow:column;
+    justify-content: center;
 }
 #works-head{
     display:flex;
@@ -203,6 +209,9 @@ button{
     font-weight:700;
     border:none;
     background-color: rgba(151, 146, 155, 0.244);
+    box-shadow: 2px 2px 4px;
+    color: rgba(66, 51, 51, 0.315);
+    border:1px solid rgb(145, 136, 56);
 }
 .carousel-button h2{
     line-height:0px;
@@ -232,7 +241,7 @@ button:active{
     display:none;
     width:20rem;
     height:20rem;
-    box-shadow: 2px 2px 1rem;
+    box-shadow: 2px 2px .5rem;
     border-radius: 4%;
     color:rgba(58, 55, 60, 0.44);
     object-fit: contain;
@@ -264,10 +273,21 @@ button:active{
 }
 #button-container{
     display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+    width:120%;
 }
-.color-select:active{
-    background-color:rgb(146, 142, 145);
+.color-select{
+    display: flex;
+    box-shadow: 2px 2px 4px;
+    color: rgba(66, 51, 51, 0.315);
+    border:1px solid rgb(145, 136, 56);
+    width:2rem;
 }
+.color-select:hover{
+    cursor: pointer;
+}
+
 #blue{
     background-color:rgba(90, 90, 134);
 }
@@ -283,9 +303,14 @@ button:active{
 #white{
     background-color: rgb(233, 230, 220);
 }
+#orange{
+    background-color: rgb(245, 192, 149);
+}
+.color-select:active{
+    box-shadow: none;
+}
 #contact{
     text-align:center
-
 }
 
 
@@ -373,5 +398,12 @@ button:active{
         width:18rem;
         align-items: center;
     }
+    #button-container{
+        width:55%
+    }
+    .color-select{
+    width:6rem;
+    }
 }
+
 
