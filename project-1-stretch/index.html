@@ -33,10 +33,19 @@
         </div>
         </div>
 
-        <div class="stage" id="thicket">
+        <div class="stage" id="thicket-stage">
           <p>You venture into the thicket, there are many trees and/or bushes.</p>
-          <img src="thicket.jpeg" id="thicket-img">
-          <img src="teeth.png" id="dennis-teeth-img">
+          <div class="image-container">
+            <img src="thicket.jpeg" class="bkgd" id="thicket-img">
+            <img src="teeth.png" id="dennis-teeth-img">
+            <img src="monster.png" id="monster-img">
+            <img src="key.png" id="key-img">
+          </div>
+        </div>
+
+        <div class="popup" id="dennis-teeth-pickup">
+          <p>You've picked up a set of old teeth. They don't smeel very nice.</p>
+          <button class="back">back</button>
         </div>
 
       <div class="stage" id="battle-stage">
@@ -69,6 +78,16 @@
         <button class="back">back</button>
       </div>
 
+      <div class="popup" id="monster-meet">
+        <p>You spot the shadowed image of a large monster in the bush. You think better of approaching it and stay at the entrance of the thicket.</p>
+        <button class="back">back</button>
+      </div>
+      <div class="popup" id="monster-key">
+        <p>You confidently march up to the monster, reasdy to smite it with you mighty weapon but before you can reach it, the monster whiffs the mushy droppings you've stuffed in your sock and begins to spew a dark green ichor. The monster runs away and you spot something shiny on the ground.</p>
+        <button class="back">back</button>
+      </div>
+
+
       <div class="popup" id="battle-drop">
         <p>The enemy dropped something for you! Check your inventory!</p>
         <button class="back">back</button>
@@ -96,6 +115,9 @@
       <div id="left-move-cave" class="move-button cave">moveleft</div>
     <div id="for-move-cave" class="move-button cave">moveforward</div>
     <div id="right-move-cave" class="move-button cave">moveright</div>
+    <div id="left-move-thicket" class="move-button thicket">moveleft</div>
+    <div id="for-move-thicket" class="move-button thicket">moveforward</div>
+    <div id="right-move-thicket" class="move-button thicket">moveright</div>
     </div>
 
 

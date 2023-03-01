@@ -45,13 +45,13 @@ const player = {
 //items obtained from battle
 const dropItems = [
     {
-        name:'bottled water',
+        name:'bottled-water',
         stamina: 15,
         hunger: 5,
 
     },
     {
-        name:'Yakitori',
+        name:'yakitori',
         hunger:-30,
         stamina:5,
     }
@@ -71,6 +71,7 @@ const stageItems =[
 ]
 //currently help items
 const inventory = []
+//populate iventory list to display
 const popInv = () => {
     $('#inventory-list').remove()
     const $list = $('<ul>').attr('id', 'inventory-list')
@@ -94,7 +95,11 @@ let invToggle = 2;
         invToggle++
     }
 }
-
+const useBottledWater = () => {
+    player.hunger += dropItems[0].hunger
+    player.stamina += dropItems[0].stamina
+    $('#bottled-water').remove()
+}
 const enemies = [
     {
         name:'Flanking Steak',
@@ -195,7 +200,7 @@ const attackRound = () =>{
     }
 }
 const dropItem = () => {
-    if(Math.random() <0.5){
+    if(Math.abs(Math.random()) <0.7){
         inventory.push(dropItems[0])
         $('#battle-drop').fadeIn()
     } else{
@@ -260,14 +265,51 @@ const stageCave =  () => {
         $('.move-button').hide()
         $('.cave').fadeIn()
         $('.stage').hide()
-        $('#cave-stage').fadeIn()
+        $('#cave-stage').fadeIn().css('display', 'flex')
 
     battleChance(Math.floor(Math.random() *2))
     }
+
+const stageThicket = () => {
+    stageName = '#thicket-stage'
+        handleHunger(3)
+        $('.move-button').hide()
+        $('.thicket').fadeIn()
+        $('.stage').hide()
+        $('#thicket-stage').fadeIn().css('display', 'flex')
+
+    battleChance(Math.floor(Math.random() *4))
+}
+const getKey = () => {
+    inventory.push(stageItems[2])
+    $('#key-img').remove()
+}
+const getDennisTeeth = () => {
+    inventory.push(stageItems[0])
+    $('#dennis-teeth-img').hide()
+    $('#dennis-teeth-pickup').show()
+}
+let hasDroppings = false
+const scareMonster = () =>{
+    for (let i = 0; i < inventory.length; i++) {
+        if(inventory[i].name == 'Rat Droppings'){
+            hasDroppings = true;  
+        }
+    
+    }
+    if(hasDroppings == true){
+        $('#monster-key').show()
+        $('#monster-img').hide()
+        $('#key-img').css('display', 'block')
+    }else{
+        $('#monster-meet').show()
+    }
+}
+
 let hasMetDennis = false
 const dennis = () => {
     for (let i =0; i <inventory.length; i++){
-        if(inventory[i].name = 'dennis-teeth'){
+        if(inventory[i].name == 'dennis-teeth'){
             hasTeeth = true
         }
     }
@@ -305,21 +347,29 @@ $('#inv-button').on('click', showInventory)
 $('#for-move-gate').on('click', () => {
     for (let i = 0; i < inventory.length; i++) {
         if(inventory[i].name == 'Large Key'){
-
+            hasKey = true
+        }
+    }
+            if(hasKey){
             $('.stage').hide()
             $('#menu-flex').hide()
             $('#win').slideDown()
             } else {
                 impasse()
             }
-        }
     })
 $('#right-move-gate').on('click', stageCave)
+$('#left-move-gate').on('click', stageThicket)
 $('#left-move-cave').on('click', stageGate)
-$('#for-move-cave').on('click', impasse)    
+$('#for-move-cave').on('click', impasse)  
+$('#right-move-thicket').on('click', stageGate)  
 $('#attack').on('click', attackRound)
 $('.back').on('click', showStage)
 $('#dennis').on('click', dennis)
+$('#dennis-teeth-img').on('click', getDennisTeeth)
+$('#bottled-water').on('click', useBottledWater)
+$('#monster-img').on('click', scareMonster)
+$('#key-img').on('click', getKey)
 $('#shish-kebab-img').click({item: 'shish-kebab'}, takeWeapon)
 })
 

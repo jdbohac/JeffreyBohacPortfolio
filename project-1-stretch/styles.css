@@ -1,7 +1,7 @@
 #stage-flex{
     display:flex;
+    justify-content: center;
     flex-flow: column;
-    flex:2;
 }
 #inv-button:hover{
     cursor: pointer;
@@ -35,10 +35,13 @@
 }
 .stage{
     display: none;
-    justify-content: center;
+    flex-flow:column;
+    align-items: center;
+    margin:auto
 }
 .popup{
     display: none;
+    position:absolute;
     z-index:2;
     background-color: white;
 
@@ -49,6 +52,9 @@
 .cave{
     display:none;
 }
+.thicket{
+    display: none;
+}
 img{
     object-fit: contain;
     height:20rem;
@@ -56,10 +62,9 @@ img{
 
     margin:auto;
 }
-#cave-bkgd{
-    padding: 1%;
-    width:10rem;
-    height:10rem
+#cave-stage{
+    flex-flow: column;
+    justify-content: center;
 }
 #dennis{
     display: block;
@@ -69,10 +74,11 @@ img{
 
 }
 #shish-kebab-img{
-    position: absolute;
-    bottom:10rem;
-    left:10rem;
+    display: block;
+    position: relative;
     height:5rem;
+    margin-left:25%;
+    bottom:25%
 }
 #shish-kebab-img:hover{
     cursor: pointer;
@@ -80,3 +86,34 @@ img{
 #dennis:hover{
     cursor: pointer;
 }
+#dennis-teeth-img{
+    display:block;
+    position:absolute;
+   width:2rem;
+   left:10rem;
+   bottom:20%
+}
+#dennis-teeth-img:hover{
+    cursor: pointer;
+}
+#monster-img{
+    display:block;
+    position:relative;
+   width:4rem;
+   bottom:20rem;
+   margin-left:10%
+}
+#monster-img:hover{
+    cursor: pointer;
+}
+#key-img{
+    display:none;
+    position:relative;
+   width:4rem;
+   bottom:13rem;
+   margin-left:20%
+}
+#key-img:hover{
+    cursor: pointer;
+}
+
