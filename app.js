@@ -125,10 +125,10 @@ const makeWhite = () => {
     $('#header li').css('color', 'rgb(42, 41, 50)')
 }
 const makeOrange = () => {
-    $('body').css('background-color', 'rgb(245, 192, 149)')
-    $('#header').css('background-color', 'rgb(245, 192, 149)')
-    $('h1').css('color', 'rgba(168, 243, 212, 0.964)')
-    $('#header li').css('color', 'rgba(199, 240, 195, 0.964)')
+    $('body').css('background-color', 'rgb(255, 189, 138)')
+    $('#header').css('background-color', 'rgb(255, 189, 138)')
+    $('h1').css('color', 'rgb(48, 178, 178)')
+    $('#header li').css('color', 'rgb(48, 178, 178)')
 }
 
 //enough functions it's time for events!
